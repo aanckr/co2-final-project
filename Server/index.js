@@ -123,7 +123,7 @@ app.post('/user', function(req, res){
     })
 });
 
-app.get('/log_in_data', function(req, res){
+app.get('/userLogIns', function(req, res){
     con.query('SELECT user_name, password FROM user', function(err, rows){
         res.send(rows);
     });
