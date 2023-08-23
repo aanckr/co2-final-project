@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/XU-Exponential-University/co2-web-dev-final-project-pluto#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0"
   }
 }
