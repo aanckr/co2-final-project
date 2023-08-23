@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql2');
 const cors = require('cors');
+const bodyParser = require('body-parser')
 port = 3001;
 
 app.use(cors());
+app.use(express.json());
+
 
 const con = mysql.createConnection({
     host: '127.0.0.1',
@@ -36,7 +39,7 @@ app.post('/initialize', (req, res) => {
         user_name VARCHAR(10) NOT NULL PRIMARY KEY,
         name VARCHAR(20) NOT NULL,
         e_mail VARCHAR(25) NOT NULL,
-        birthdate DATETIME,
+        birthdate DATE,
         height INT,
         weight INT,
         sex ENUM('Male', 'Female', 'Diverse'),
@@ -123,7 +126,7 @@ app.post('/user', function(req, res){
         return;
     };
     
-    const sql = 'INSERT INTO user (user_name, name, e_mail, birthday, height, weight, sex, semester, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    const sql = 'INSERT INTO user (user_name, name, e_mail, birthdate, height, weight, sex, semester, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
     con.query(sql, [userName, name, email, birthdate, height, weight, sex, semester, course], function(err, result){
         if(err) throw err;
         res.status(201).send('New user created');
