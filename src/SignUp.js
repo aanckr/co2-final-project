@@ -31,14 +31,10 @@ function SignUp(){
         };
         
         const dataFetch = async () => {
-            const response = await (
-                await fetch(
-                    "http://localhost:3001/user",
-                    requestOptions
-                )
-            ).json();
+            const response = await fetch("http://localhost:3001/user",requestOptions)
+            const data = response.json();
 
-            console.log (response);
+            console.log (data);
         }
         dataFetch();
     };
