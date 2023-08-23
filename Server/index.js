@@ -36,11 +36,11 @@ app.post('/initialize', (req, res) => {
         user_name VARCHAR(10) NOT NULL PRIMARY KEY,
         name VARCHAR(20) NOT NULL,
         e_mail VARCHAR(25) NOT NULL,
-        birthdate DATETIME NOT NULL,
+        birthdate DATETIME,
         height INT,
         weight INT,
         sex ENUM('Male', 'Female', 'Diverse'),
-        semester INT NOT NULL,
+        semester INT,
         course_of_study VARCHAR(40)  
     );`;    
 
@@ -116,12 +116,18 @@ app.get('/user/:user_name', function(req, res){
 });
 
 app.post('/user', function(req, res){
-    const {user_name, first_name, last_name, birthdate, height, weight, sex, semester, study_module} = req.body;
-    const sql = 'INSERT INTO user (user_name, first_name, last_name, birthdate, height, weight, sex, semester, study_module) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    con.query(sql, [user_name, first_name, last_name, birthdate, height, weight, sex, semester, study_module], function(err, result){
+    const {userName, name, email, birthdate, height, weight, sex, semester, course} = req.body
+    
+    if(userName == null || name == null || email == null) {
+        res.json({error:'User Name, Name or E-Mail is missing.'});
+        return;
+    };
+    
+    const sql = 'INSERT INTO user (user_name, name, e_mail, birthday, height, weight, sex, semester, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    con.query(sql, [userName, name, email, birthdate, height, weight, sex, semester, course], function(err, result){
         if(err) throw err;
-        res.status(201).send('user created')
-    });
+        res.status(201).send('New user created');
+    })
 });
 
 app.get('/log_in', function(req, res){
@@ -135,7 +141,7 @@ app.post('/log_in', function(req, res){
     const sql = 'INSERT INTO user (user_name, password) VALUES (?, ?)';
     con.query(sql, [user_name, password], function(err, result){
         if(err) throw err;
-        res.status(201).send('user created')
+        res.status(201).send('LogIn data created')
     });
 });
 
