@@ -12,6 +12,7 @@ function SignUp(){
     const [repeatPassword, setRepeatPassword]= React.useState([]);
     
     const handleSubmit = (event) => {
+<<<<<<< HEAD
         if (name == null|| email == null || birthdate == null || password == null || repeatPassword == null){
             console.log('A mendetory input (*) is missing.');
             return;
@@ -20,13 +21,19 @@ function SignUp(){
             return;
         };
 
+=======
+>>>>>>> bbcb46f82b10ddb974ce048baa64369d7ff3c754
         event.preventDefault();
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({userName: userName, name: name, email: email, birthdate: birthdate, height: null, weight: null, sex: sex, semester: semester, course: course})
         };
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> bbcb46f82b10ddb974ce048baa64369d7ff3c754
         const dataFetch = async () => {
             const response = await (
                 await fetch(
