@@ -61,6 +61,8 @@ function SignUp(){
             <br></br>
             <button type='submit'>Sign Up</button>
         </form>
+        <hr/>
+        <button onClick={() => window.location.href = 'http://localhost:3000/LogIn'}>Log In</button>
         </div>
     );
 }
