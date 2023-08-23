@@ -11,9 +11,26 @@ function SignUp(){
     const [password, setPassword]= React.useState([]);
     const [repeatPassword, setRepeatPassword]= React.useState([]);
     
-    const handleSubmit = (event) => (
-        event.preventDefault()
-    );
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({userName: userName, name: name, email: email, birthdate: birthdate, height: null, weight: null, sex: sex, semester: semester, course: course})
+        };
+
+        const dataFetch = async () => {
+            const response = await (
+                await fetch(
+                    "http://localhost:3001/user",
+                    requestOptions
+                )
+            ).json();
+
+            console.log (response);
+        }
+        dataFetch();
+    };
 
     return (
         <div>
