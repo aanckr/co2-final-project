@@ -1,7 +1,7 @@
-import Header from './Header';
 import CurrentStatus from './CurrentStatus';
-import PersonalMessage from './PersonalMessage';
+import Header from './Header';
 import HealthData from './HealthData';
+import PersonalMessage from './PersonalMessage';
 
 function Overview() {
   return (
