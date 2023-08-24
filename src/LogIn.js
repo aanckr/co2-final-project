@@ -23,6 +23,7 @@ function LogIn () {
 
         if (userExists == false || passwordCorrect == false) {
             alert('Incorrect user data.')
+            return;
         }    
     };
     
