@@ -3,6 +3,7 @@ import Homepage from './Homepage';
 import LogIn from './LogIn';
 import SignUp from './SignUp';
 import Overview from './Overview';
+import Profile from './Profile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Overview" element={<Overview />} />
+          <Route path="/Profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>
