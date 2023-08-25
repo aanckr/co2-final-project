@@ -1,0 +1,15 @@
+#current-status, #personal-message, #health-data{
+    width: 80%;
+    height: 150px;
+    border-radius: 70px;
+    box-shadow: 0 0 5px 0 black;
+    margin: 30px 10%;
+  }
+  
+  #current-status{
+    margin-top: 100px;
+  }
+  
+  .overview-headline{
+    padding: 15px 60px;
+  }
