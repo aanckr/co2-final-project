@@ -2,37 +2,3 @@
   padding: 0;
   margin: 0;
 }
-
-.navigation{
-  font-size: 1.2em;
-  margin: 20px 15%;
-  width: 700px;
-  height: 70px;
-  border-radius: 70px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 5px 0 black;
-  float: left;
-  }
-
-.navigation  * {
-  display: inline;
-  padding: 27px;
-}
-
-.navigation li {
- width: 175px;
-}
-
-.navigation li a {
-  color: magenta;
-  text-decoration: none;
-}
-
-.profile-picture{
-  height: 70px;
-  width: 70px;
-  margin: 20px 15% 20px 85%;
-  border-radius: 70px;
-  box-shadow: 0 0 5px 0 black;
-}
