@@ -1,22 +1,32 @@
-function Header (){
+import "./Header.css";
+import profilePicture from './images/profile-pic.png';
+
+function Header() {
     return (
-    <>
-        <div className="header">
-            <nav className="navigation">
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Track</a></li>
-                    <li><a href="#">Analyse</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-
-            <div className="profile-picture">
-            
-            </div>
+      <div id="header">
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <a href="#">Track</a>
+            </li>
+            <li>
+              <a href="#">Analysis</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <div id="profile-picture">
+          <img src={profilePicture} alt="Profile Picture" />
         </div>
-    </>
-    )
-}
-
-export default Header;
+      </div>
+    );
+  }
+  
+  export default Header;
+  
