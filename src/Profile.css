@@ -1,0 +1,66 @@
+h1, h2{
+    clear: both;
+    text-align: center;
+    
+}
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+h2{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+h4{
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 35%;
+}
+
+.field, #field{
+    clear: both;
+    padding: 5px 20px;
+    margin: 10px 35%;
+    margin-bottom: 20px;
+    width: 30%;
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.labeling{
+    margin-left: 35%;
+    margin-top: 30px; 
+}
+
+#field{
+    margin-top: 10px;
+}
+
+#bachelor, #master{
+    margin-left: 35%;
+    margin-right: 20px;
+}
+
+#master{
+    margin-bottom: 30px;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+
+button{
+    width: 10%;
+    height: 30px;
+    margin: 20px 45%;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 0 black;
+}
