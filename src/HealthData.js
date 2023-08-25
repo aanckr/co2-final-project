@@ -1,8 +1,10 @@
+import "./Overview.css";
+
 function HealthData (){
     return (
         <div id="health-data">
 
-            <h3 className="overview-header">Health Data</h3>
+            <h3 className="overview-headline">Health Data</h3>
     
         </div>
     )
