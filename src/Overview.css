@@ -1,3 +1,9 @@
+h1{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
 #current-status, #personal-message, #health-data{
     width: 80%;
     height: 150px;
