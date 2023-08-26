@@ -109,7 +109,7 @@ function Profile() {
                 </label>
             </div>
         }
-        <button type="button">Save</button> 
+        <button className='save-button' type="button">Save</button> 
 
     </form>
 

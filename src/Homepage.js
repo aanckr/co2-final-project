@@ -1,3 +1,5 @@
+import Footer_start from './Footer-start';
+
 const React = require('react');
 const { Link } = require('react-router-dom');
 
@@ -32,6 +34,7 @@ function Homepage() {
                     </section>
                 </div>
             </div>
+            < Footer_start/>
         </div>
     );
 }
