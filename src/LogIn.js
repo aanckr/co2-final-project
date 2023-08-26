@@ -25,7 +25,7 @@ function LogIn () {
             alert('Incorrect user data.')
             return;
         } else {
-            window.location.href = `http://localhost:3000/Overwiev/${userName}`;
+            window.location.href = `http://localhost:3000/Overview/${userName}`;
         }
 
     };
