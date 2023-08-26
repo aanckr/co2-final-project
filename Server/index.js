@@ -51,7 +51,7 @@ app.post('/initialize', (req, res) => {
     const mental_health = `CREATE TABLE IF NOT EXISTS mental_health (
         mental_health_id INT AUTO_INCREMENT PRIMARY KEY,
         user_name VARCHAR(10) NOT NULL,
-        date datetime NOT NULL,
+        date DATE NOT NULL,
         general_mood INT,
         stress_level INT,
         sleep_quality INT,
@@ -62,7 +62,7 @@ app.post('/initialize', (req, res) => {
     const study_and_workload = `CREATE TABLE IF NOT EXISTS study_and_worklaod (
         study_and_workload_id INT AUTO_INCREMENT PRIMARY KEY,
         user_name VARCHAR(10) NOT NULL,
-        date DATETIME NOT NULL,
+        date DATE NOT NULL,
         study_time DECIMAL(4,2),
         learning_time DECIMAL(4,2),
         work_time DECIMAL(4,2),
@@ -72,7 +72,7 @@ app.post('/initialize', (req, res) => {
     const lifestyle = `CREATE TABLE IF NOT EXISTS lifestyle (
         lifestyle_id INT AUTO_INCREMENT PRIMARY KEY,
         user_name VARCHAR(10) NOT NULL,
-        date DATETIME NOT NULL,
+        date DATE NOT NULL,
         dietary_habits ENUM('Vegetarian', 'Vegan', 'Omnivorous', 'Other'),
         activity_time DECIMAL(4,2),
         tobacco_use ENUM('Yes', 'No'),
