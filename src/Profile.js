@@ -1,5 +1,6 @@
 import "./Profile.css";
 import Header from './Header';
+import Footer from './Footer'
 import React, {useState} from "react";
 
 function Profile() {
@@ -8,7 +9,7 @@ function Profile() {
     const [master, setMaster] = useState(false);
 
   return (
-  <>
+  <div className="color">
     <Header/>
 
     <h1>Your Personal Data</h1>
@@ -113,7 +114,9 @@ function Profile() {
 
     </form>
 
-  </>
+    <Footer/>
+
+  </div>
   )
 }
 
