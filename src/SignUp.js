@@ -11,21 +11,24 @@ function SignUp(){
     
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        const finalBirthdate = birthdate ? birthdate : null;
+        const finalSex = sex ? sex : null;
         
         if (!name || !userName || !email || !password || !repeatPassword) {
             alert('Please fill out all required fields (*).');
             return;
-        }
-
-        if (password !== repeatPassword) {
+        } else if (password !== repeatPassword) {
             alert('Passwords do not match.');
             return;
-        }
-        
+        } else {
+            window.location.href = 'http://localhost:3000/LogIn'
+        }   
+
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: birthdate, height: null, weight: null, sex: sex, semester: null, course: null})
+            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: finalBirthdate, height: null, weight: null, sex: finalSex, semester: null, course: null})
         };
         
         const dataFetch = async () => {
