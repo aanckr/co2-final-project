@@ -24,7 +24,10 @@ function LogIn () {
         if (userExists == false || passwordCorrect == false) {
             alert('Incorrect user data.')
             return;
-        }    
+        } else {
+            window.location.href = `http://localhost:3000/Overwiev/${userName}`;
+        }
+
     };
     
     useEffect(() => {
