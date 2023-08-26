@@ -1,7 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand:wght@500&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.color {
+  background: linear-gradient(to bottom, rgba(237, 113, 173, 0.7), rgba(114, 119, 241, 0.5));
+}
+
+.color_box {
+  margin: 40px 80px 80px 80px;
+  display: flex;
+  align-items: left;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-radius: 2em;
+  border: none;
+  background-color: rgba(250, 250, 250, 0.7);
+
+}
+
+.text_box {
+  margin: auto;
+  padding: 10px 10% 10px 10%;
+}
+
+.color_box h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.color_box h6 {
+  text-align: right;
+  padding: 10px;
+}
+
+.color_box h2,
+h3,
+h4 {
+  padding: 10px;
+}
+
+.color_box p {
+  margin-bottom: 10px;
+}
+
+.color_box ol li {
+  font-weight: bold;
 }
