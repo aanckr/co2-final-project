@@ -5,8 +5,6 @@ function SignUp(){
     const [email, setEmail]= React.useState('');
     const [birthdate, setBirthdate]= React.useState('');
     const [sex, setSex]=  React.useState('');
-    const [semester, setSemester]= React.useState('');
-    const [course, setCourse]= React.useState('');
     const [userName, setUserName]= React.useState('');
     const [password, setPassword]= React.useState('');
     const [repeatPassword, setRepeatPassword]= React.useState('');
@@ -27,7 +25,7 @@ function SignUp(){
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: birthdate, height: null, weight: null, sex: sex, semester: semester, course: course})
+            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: birthdate, height: null, weight: null, sex: sex, semester: null, course: null})
         };
         
         const dataFetch = async () => {
@@ -52,8 +50,6 @@ function SignUp(){
                 <option value='Female'>Female</option>
                 <option value='Diverse'>Diverse</option>
             </select><br></br>
-            <input type='number' placeholder='Semester' name='semester' value={semester} onChange={(e) => setSemester(e.target.value)}></input><br></br>
-            <input type='text' placeholder='Course of Study' name='course' maxLength={40} value={course} onChange={(e) => setCourse(e.target.value)}></input><br></br>
             <br></br>
             <input type='text' placeholder='* User Name' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input><br></br>
             <input type='password' placeholder='* Password' name='password' minLength={4} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br>
