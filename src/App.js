@@ -7,6 +7,7 @@ import Profile from './Profile';
 import Privacy from './Privacy';
 import Blog from './Blog';
 import Analysis from './Analysis';
+import Track from './Track';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Profile/:user_name" element={<Profile />} />
           <Route path="/Privacy" element={<Privacy />} />
           <Route path="/Blog/:user_name" element={<Blog />} />
+          <Route path="/Track/:user_name" element={<Track />} />
         </Routes>
       </BrowserRouter>
     </div>
