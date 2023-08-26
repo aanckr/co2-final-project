@@ -15,10 +15,10 @@ function Header() {
             <a href="#">Track</a>
           </li>
           <li>
-            <a href="#">Analysis</a>
+            <a href={"./Analysis"}>Analysis</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href={"./Blog"}>Blog</a>
           </li>
         </ul>
       </nav>
