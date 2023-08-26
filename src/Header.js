@@ -12,9 +12,8 @@ function Header() {
           <li>
             <a onClick={() => window.location.href = `http://localhost:3000/Overview/${user_name}`}>Profile</a>
           </li>
-
           <li>
-            <a href="#">Track</a>
+            <a onClick={() => window.location.href = `http://localhost:3000/Track/${user_name}`}>Track</a>
           </li>
           <li>
             <a onClick={() => window.location.href = `http://localhost:3000/Analysis/${user_name}`}>Analysis</a>
@@ -27,7 +26,6 @@ function Header() {
 
       <div id="profile-picture">
       <a onClick={() => window.location.href = `http://localhost:3000/Profile/${user_name}`}><img src={profilePicture}  alt="Profile Picture" /></a>
-        
       </div>
     </div>
   );
