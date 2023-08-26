@@ -17,11 +17,11 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route path="/LogIn" element={<LogIn />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Overview" element={<Overview />} />
-          <Route path="/Analysis" element={<Analysis />} />
-          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Overview/:user_name" element={<Overview />} />
+          <Route path="/Analysis/:user_name" element={<Analysis />} />
+          <Route path="/Profile/:user_name" element={<Profile />} />
           <Route path="/Privacy" element={<Privacy />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:user_name" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </div>
