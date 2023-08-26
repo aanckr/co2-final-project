@@ -1,4 +1,4 @@
-import Footer_start from './Footer-start';
+import Footer_start from './Footer_start';
 
 const React = require('react');
 const { Link } = require('react-router-dom');

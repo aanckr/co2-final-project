@@ -12,6 +12,7 @@ function Footer() {
             </div>
             <div className="footer-col-4">
                 <h3>LEGAL</h3>
+                <Link to="/privacy">Privacy</Link>
             </div>
             <div className="footer-col-5">
                 <span>mentalhealthtracker@pluto</span>

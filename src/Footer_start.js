@@ -12,8 +12,8 @@ function Footer_start() {
             </div>
             <div className="footer-col-1">
                 <h3>JOIN US</h3>
-                <Link to="/LogIn">LogIn</Link>
-                <Link to="/SignUp">SignUp</Link>
+                <Link to="/logIn">LogIn</Link>
+                <Link to="/signUp">SignUp</Link>
             </div>
             <div className="footer-col-2">
                 <h3>NEWSLETTER</h3>
@@ -31,6 +31,7 @@ function Footer_start() {
             </div>
             <div className='footer-col-1'>
                 <h3>LEGAL</h3>
+                <Link to="/privacy">Privacy</Link>
             </div>
         </footer>
     );
