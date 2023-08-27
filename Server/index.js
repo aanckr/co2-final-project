@@ -129,6 +129,24 @@ app.get('/userLogIns', function(req, res){
     });
 });
 
+app.get('/mentalHealth/:user_name', function(req, res){
+    con.query('SELECT * FROM mental_health WHERE user_name =?', [req.params.user_name], function(err, row){
+        res.send(row);
+    });
+});
+
+app.get('/studyandworkload/:user_name', function(req, res){
+    con.query('SELECT * FROM study_and_workload WHERE user_name =?', [req.params.user_name], function(err, row){
+        res.send(row);
+    });
+});
+
+app.get('/lifestyle/:user_name', function(req, res){
+    con.query('SELECT * FROM lifestyle WHERE user_name =?', [req.params.user_name], function(err, row){
+        res.send(row);
+    });
+});
+
 app.listen(port, () => {
     console.log(`Express-Server läuft auf Port ${port}`);
   });
