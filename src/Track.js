@@ -13,9 +13,9 @@ function Track(){
 
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const [generalMood, setGeneralMood] = useState();
-    const [stressLevel, setStressLevel] = useState();
-    const [sleepQuality, setSleepQualtiy] = useState();
+    const [generalMood, setGeneralMood] = useState(5);
+    const [stressLevel, setStressLevel] = useState(5);
+    const [sleepQuality, setSleepQualtiy] = useState(5);
     const [sleepDuration, setSleepDuration] = useState();
 
     const [studyTime, setStudyTime] = useState();
