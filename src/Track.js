@@ -32,22 +32,20 @@ function Track(){
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     var now = today.toLocaleString('en-US', options);
     var date = today.toISOString().slice(0, 10);
-    console.log(date)
+    
     useEffect(() => {
         
         const dataFetch = async () => {
             const response = await fetch(`http://localhost:3001/mentalHealth/${user_name}/${date}`)
             const data = await response.json();
-            console.log(data[0])
+
             if (data[0]){
                 setFormSubmitted(true);
             };
             
         };
         dataFetch();
-    }, [user_name]);
-
-   
+    }, [user_name, date]);
 
     const handleSubmit = (event) => {
 
@@ -85,16 +83,11 @@ function Track(){
         };
         
         const dataFetch = async () => {
-            const mentalHealthResponse = await fetch("http://localhost:3001/mentalHealth", mentalHealthOptions);
-            const mentalHealthData = await mentalHealthResponse.json();
-
-            const studyAndWorkloadResponse = await fetch("http://localhost:3001/studyAndWorkload", studyAndWorkloadOptions);
-            const studyAndWorkloadData = await studyAndWorkloadResponse.json();
-
-            const lifestyleResponse = await fetch("http://localhost:3001/lifestyle", lifestyleOptions);
-            const lifestyleData = await lifestyleResponse.json();
-
-            console.log({mentalHealthData, studyAndWorkloadData, lifestyleData});
+            const responses = await Promise.all([
+                fetch("http://localhost:3001/mentalHealth", mentalHealthOptions),
+                fetch("http://localhost:3001/studyAndWorkload", studyAndWorkloadOptions),
+                fetch("http://localhost:3001/lifestyle", lifestyleOptions)
+            ]);
         }
         dataFetch();
         window.location.href = `http://localhost:3000/Track/${user_name}`;
