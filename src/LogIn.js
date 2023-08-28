@@ -10,18 +10,16 @@ function LogIn () {
 
         var userExists = false;
         var passwordCorrect = false;
-        var user;
         for (let i = 0; i < logInEntries.length; i++) {
-            if (userName == logInEntries[i].user_name){
+            if (userName === logInEntries[i].user_name){
                 userExists = true;
-                user = userName;
-                if (password == logInEntries[i].password){
+                if (password === logInEntries[i].password){
                     passwordCorrect = true;
                 }
             }
         }
 
-        if (userExists == false || passwordCorrect == false) {
+        if (userExists === false || passwordCorrect === false) {
             alert('Incorrect user data.')
             return;
         } else {
