@@ -22,6 +22,7 @@ function Track(){
             <MentalHealth/>
             <StudyAndWorkload/>
             <Lifestyle/>
+            <button className='save-button'>Save</button> 
             <Footer/>
 
         </div>
