@@ -27,39 +27,22 @@ function MentalHealthInformation(){
 
     return (
     <div>
-        {/* Toggle Buttons or Checkboxes */}
         <label>
-                <input
-                    type="checkbox"
-                    checked={showLines.general_mood}
-                    onChange={() => toggleLine('general_mood')}
-                />
-                General Mood
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    checked={showLines.stress_level}
-                    onChange={() => toggleLine('stress_level')}
-                />
-                Stress Level
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    checked={showLines.sleep_quality}
-                    onChange={() => toggleLine('sleep_quality')}
-                />
-                Sleep Quality
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    checked={showLines.sleep_duration}
-                    onChange={() => toggleLine('sleep_duration')}
-                />
-                Sleep Duration
-            </label>
+            <input type="checkbox" checked={showLines.general_mood} onChange={() => toggleLine('general_mood')} />
+            General Mood
+        </label>
+        <label>
+            <input type="checkbox" checked={showLines.stress_level} onChange={() => toggleLine('stress_level')} />
+            Stress Level
+        </label>
+        <label>
+            <input type="checkbox" checked={showLines.sleep_quality} onChange={() => toggleLine('sleep_quality')} />
+            Sleep Quality
+        </label>
+        <label>
+            <input type="checkbox" checked={showLines.sleep_duration} onChange={() => toggleLine('sleep_duration')} />
+            Sleep Duration
+        </label>
 
         <LineChart
             width={1200}
