@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect } from 'react';
 import Header from "./Header";
+import MentalHealthInformation from "./MentalHealthInformation";
+import StudyAndWorkloadInformation from "./StudyAndWorkloadInformation";
+import LifestyleInformation from "./LifestyleInformation";
 
 function Analysis(){
     let { user_name } = useParams();
@@ -50,15 +53,15 @@ function Analysis(){
             <hr/>
 
             <h3>Mental Helth Information</h3>
-            
+            <MentalHealthInformation />
             <hr/>
 
             <h3>Study and Workload Information </h3>
-
+            <StudyAndWorkloadInformation />
             <hr/>
 
             <h3>Lifestyle Information</h3>
-
+            <LifestyleInformation />
             <hr/>
 
             <h3>Intersting Blogs</h3>
