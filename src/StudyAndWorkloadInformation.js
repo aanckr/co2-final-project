@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 function StudyAndWorkloadInformation(){
     let { user_name } = useParams();
@@ -27,15 +27,15 @@ function StudyAndWorkloadInformation(){
     return (
     <div>
         <label>
-            <input type="checkbox" checked={showLines.study_time} onChange={() => toggleLine('general_mood')}/>
+            <input type="checkbox" checked={showLines.study_time} onChange={() => toggleLine('study_time')}/>
             Study Time on Campus
         </label>
         <label>
-            <input type="checkbox" checked={showLines.learning_time} onChange={() => toggleLine('stress_level')} />
+            <input type="checkbox" checked={showLines.learning_time} onChange={() => toggleLine('learning_time')} />
             Study Time at Home
         </label>
         <label>
-            <input type="checkbox" checked={showLines.work_time} onChange={() => toggleLine('sleep_quality')} />
+            <input type="checkbox" checked={showLines.work_time} onChange={() => toggleLine('work_time')} />
             Work Time
         </label>
 
