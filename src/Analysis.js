@@ -24,14 +24,13 @@ function Analysis(){
         const emojisTrend = [0x2197, 0x2198]
         
         if (mentalHealth[0]){
-            var output = String.fromCodePoint(emojisMood[mentalHealth[0].general_mood]);
+            var output = String.fromCodePoint(emojisMood[(mentalHealth[0].general_mood-1)]);
             if (mentalHealth.length > 6){
                 var generalMoodPast = 0;
                 for (var i = 1; i < 6; i++){
                     generalMoodPast += mentalHealth[i].general_mood;
                 };
                 generalMoodPast = generalMoodPast/5;
-                console.log(generalMoodPast);
 
                 if (mentalHealth[0].general_mood < generalMoodPast){
                     output += String.fromCharCode(emojisTrend[1])
