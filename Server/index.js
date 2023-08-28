@@ -59,7 +59,7 @@ app.post('/initialize', (req, res) => {
         FOREIGN KEY (user_name) REFERENCES user (user_name)
     );`;
 
-    const study_and_workload = `CREATE TABLE IF NOT EXISTS study_and_worklaod (
+    const study_and_workload = `CREATE TABLE IF NOT EXISTS study_and_workload (
         study_and_workload_id INT AUTO_INCREMENT PRIMARY KEY,
         user_name VARCHAR(10) NOT NULL,
         date DATE NOT NULL,
@@ -130,19 +130,19 @@ app.get('/userLogIns', function(req, res){
 });
 
 app.get('/mentalHealth/:user_name', function(req, res){
-    con.query('SELECT * FROM mental_health WHERE user_name =?', [req.params.user_name], function(err, row){
+    con.query('SELECT * FROM mental_health WHERE user_name =? ORDER BY date DESC', [req.params.user_name], function(err, row){
         res.send(row);
     });
 });
 
 app.get('/studyandworkload/:user_name', function(req, res){
-    con.query('SELECT * FROM study_and_workload WHERE user_name =?', [req.params.user_name], function(err, row){
+    con.query('SELECT * FROM study_and_workload WHERE user_name =? ORDER BY date DESC', [req.params.user_name], function(err, row){
         res.send(row);
     });
 });
 
 app.get('/lifestyle/:user_name', function(req, res){
-    con.query('SELECT * FROM lifestyle WHERE user_name =?', [req.params.user_name], function(err, row){
+    con.query('SELECT * FROM lifestyle WHERE user_name =? ORDER BY date DESC', [req.params.user_name], function(err, row){
         res.send(row);
     });
 });
