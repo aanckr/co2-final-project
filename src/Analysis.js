@@ -5,55 +5,52 @@ import Header from "./Header";
 function Analysis(){
     let { user_name } = useParams();
     const [mentalHealth, setMentalHealth] = React.useState([]);
-    const [studyAndWorkload, setStudyAndWorkload] = React.useState([]);
-    const [lifestyle, setLifestyle] = React.useState([]);
 
     useEffect(() => {
-        const fetchMentalHealth = async () => {
-            const response = await fetch(`http://localhost:3001/mentalHealth/${user_name}`);
-            return response.json();
+        const dataFetch = async () => {
+          const response = await fetch(`http://localhost:3001/mentalHealth/${user_name}`)
+  
+          const data = await response.json();
+          setMentalHealth(data);
         };
+          dataFetch();
+    },[user_name]);
     
-        const fetchStudyAndWorkload = async () => {
-            const response = await fetch(`http://localhost:3001/studyandworkload/${user_name}`);
-            return response.json();
+    function renderEmoji(){
+        const emojisMood = [0x1F621, 0x1F613, 0x1F610, 0x1F603, 0x1F929];
+        const emojisTrend = [0x2197, 0x2198]
+        
+        if (mentalHealth[0]){
+            var output = String.fromCodePoint(emojisMood[mentalHealth[0].general_mood]);
+            if (mentalHealth.length > 6){
+                var generalMoodPast = 0;
+                for (var i = 1; i < 6; i++){
+                    generalMoodPast += mentalHealth[i].general_mood;
+                };
+                generalMoodPast = generalMoodPast/5;
+                console.log(generalMoodPast);
+
+                if (mentalHealth[0].general_mood < generalMoodPast){
+                    output += String.fromCharCode(emojisTrend[1])
+                } else {
+                    output += String.fromCharCode(emojisTrend[0])
+                }
+            };
+            return output;
         };
-    
-        const fetchLifestyle = async () => {
-            const response = await fetch(`http://localhost:3001/lifestyle/${user_name}`);
-            return response.json();
-        };
-    
-        const fetchData = async () => {
-            const [mentalHealthData, studyAndWorkloadData, lifestyleData] = await Promise.all([
-                fetchMentalHealth(),
-                fetchStudyAndWorkload(),
-                fetchLifestyle(),
-            ]);
-    
-            setMentalHealth(mentalHealthData);
-            setStudyAndWorkload(studyAndWorkloadData);
-            setLifestyle(lifestyleData);
-        };
-    
-        fetchData();
-    }, [user_name]);
-    
-    console.log('metal:', mentalHealth);
-    console.log('s&:', studyAndWorkload);
-    console.log('lifestyle:', lifestyle);
-    
-      
+        return 'No data.'
+    };
       
     return (
         <div>
             <Header />
+            <br/>
             <h3>General Feeling</h3>
-
+            <span>{renderEmoji()}</span>
             <hr/>
 
             <h3>Mental Helth Information</h3>
-        
+            
             <hr/>
 
             <h3>Study and Workload Information </h3>
