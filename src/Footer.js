@@ -15,7 +15,7 @@ function Footer() {
                 <Link to="/privacy">Privacy</Link>
             </div>
             <div className="footer-col-5">
-                <span>mentalhealthtracker@pluto</span>
+                <span>mentalhealthtracker@pluto.de</span>
             </div>
             <div className="footer-col-3">
                 <h3>CONTACT</h3>
