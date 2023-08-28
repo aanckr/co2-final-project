@@ -6,6 +6,10 @@ import Footer from './Footer'
 import "./Track.css";
 
 function Track(){
+    const [generalMood, setGeneralMood] = useState(1);
+    const [stressLevel, setStressLevel] = useState(1);
+    const [sleepQuality, setSleepQualtiy] = useState(1);
+    const [sleepDuration, setSleepDuration] = useState(0);
 
     var today = new Date();
  
@@ -19,7 +23,7 @@ function Track(){
             <span>
                 <h3 id='date'>{now}</h3>
             </span>
-            <MentalHealth/>
+            <MentalHealth setGeneralMood={setGeneralMood} setStressLevel={setStressLevel} setSleepQualtiy={setSleepQualtiy} setSleepDuration={setSleepDuration} />
             <StudyAndWorkload/>
             <Lifestyle/>
             <button className='save-button'>Save</button> 
