@@ -24,7 +24,7 @@ VALUES
 ('John', '2023-08-14', 3, 2, 4, 8.0);
 
 -- Inserting 14 sample rows into study_and_worklaod table
-INSERT INTO study_and_worklaod 
+INSERT INTO study_and_workload 
 (user_name, date, study_time, learning_time, work_time) 
 VALUES 
 ('John', '2023-08-01', 2.0, 1.5, 5.0),
