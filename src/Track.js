@@ -4,12 +4,24 @@ import StudyAndWorkload from './StudyAndWorkload';
 import Lifestyle from './Lifestyle';
 import Footer from './Footer'
 import "./Track.css";
+import { useState } from 'react';
+
 
 function Track(){
-    const [generalMood, setGeneralMood] = useState(1);
-    const [stressLevel, setStressLevel] = useState(1);
-    const [sleepQuality, setSleepQualtiy] = useState(1);
-    const [sleepDuration, setSleepDuration] = useState(0);
+    const [generalMood, setGeneralMood] = useState();
+    const [stressLevel, setStressLevel] = useState();
+    const [sleepQuality, setSleepQualtiy] = useState();
+    const [sleepDuration, setSleepDuration] = useState();
+
+    const [studyTime, setStudyTime] = useState();
+    const [learningTime, setLearningTime] = useState();
+    const [workTime, setWorkTime] = useState();
+
+    const [dietaryHabits, setDietaryHabits] = useState();
+    const [activityTime, setActivityTime] = useState();
+    const [tobaccoUse, setTobaccoUse] = useState();
+    const [alcoholConsumption, setAlcoholConsumption] = useState();
+    const [drugUse, setDrugUse] = useState();
 
     var today = new Date();
  
@@ -24,8 +36,8 @@ function Track(){
                 <h3 id='date'>{now}</h3>
             </span>
             <MentalHealth setGeneralMood={setGeneralMood} setStressLevel={setStressLevel} setSleepQualtiy={setSleepQualtiy} setSleepDuration={setSleepDuration} />
-            <StudyAndWorkload/>
-            <Lifestyle/>
+            <StudyAndWorkload setStudyTime={setStudyTime} setLearningTime={setLearningTime} setWorkTime={setWorkTime} />
+            <Lifestyle setDietaryHabits={setDietaryHabits} setActivityTime={setActivityTime} setTobaccoUse={setTobaccoUse} setAlcoholConsumption={setAlcoholConsumption} setDrugUse={setDrugUse} />
             <button className='save-button'>Save</button> 
             <Footer/>
 

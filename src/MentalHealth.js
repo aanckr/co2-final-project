@@ -1,6 +1,6 @@
 import "./Track.css";
 
-function MentalHealth (setGeneralMood, setStressLevel, setSleepQualtiy, setSleepDuration){
+function MentalHealth ({setGeneralMood, setStressLevel, setSleepQualtiy, setSleepDuration}){
     return (
         <div id="mental-health">
 
