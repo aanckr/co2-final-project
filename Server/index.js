@@ -135,15 +135,48 @@ app.get('/mentalHealth/:user_name', function(req, res){
     });
 });
 
-app.get('/studyandworkload/:user_name', function(req, res){
+app.get('/mentalHealth/:user_name/:date', function(req, res){
+    con.query('SELECT * FROM mental_health WHERE (user_name = ? and date = ?)', [req.params.user_name, req.params.date], function(err, row){
+        res.send(row)
+    })
+})
+
+app.post('/mentalHealth', function(req, res){
+    const {user_name, date, general_mood, stress_level, sleep_quality, sleep_duration} = req.body
+    const sql = 'INSERT INTO mental_health (user_name, date, general_mood, stress_level, sleep_quality, sleep_duration) VALUES (?, ?, ?, ?, ?, ?)'
+    con.query(sql, [user_name, date, general_mood, stress_level, sleep_quality, sleep_duration], function(err, result){
+        if(err) throw err;
+        res.json({status: 'New mental health entry'});
+    });
+});
+
+app.get('/studyAndWorkload/:user_name', function(req, res){
     con.query('SELECT * FROM study_and_workload WHERE user_name =? ORDER BY date DESC', [req.params.user_name], function(err, row){
         res.send(row);
+    });
+});
+
+app.post('/studyAndWorkload', function(req, res){
+    const {user_name, date, study_time, learning_time, work_time} = req.body
+    const sql = 'INSERT INTO study_and_workload (user_name, date, study_time, learning_time, work_time) VALUES (?, ?, ?, ?, ?)'
+    con.query(sql, [user_name, date, study_time, learning_time, work_time], function(err, result){
+        if(err) throw err;
+        res.json({status: 'New mental health entry'});
     });
 });
 
 app.get('/lifestyle/:user_name', function(req, res){
     con.query('SELECT * FROM lifestyle WHERE user_name =? ORDER BY date DESC', [req.params.user_name], function(err, row){
         res.send(row);
+    });
+});
+
+app.post('/lifestyle', function(req, res){
+    const {user_name, date, dietary_habits, activity_time, tobacco_use, alcohol_consumption, drug_use} = req.body
+    const sql = 'INSERT INTO lifestyle (user_name, date, dietary_habits, activity_time, tobacco_use, alcohol_consumption, drug_use) VALUES (?, ?, ?, ?, ?, ?, ?)'
+    con.query(sql, [user_name, date, dietary_habits, activity_time, tobacco_use, alcohol_consumption, drug_use], function(err, result){
+        if(err) throw err;
+        res.json({status: 'New mental health entry'});
     });
 });
 
