@@ -2,7 +2,7 @@ import Header from './Header';
 import MentalHealth from './MentalHealth';
 import StudyAndWorkload from './StudyAndWorkload';
 import Lifestyle from './Lifestyle';
-import Footer from './Footer'
+import Footer from './Footer';
 import "./Track.css";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -97,8 +97,10 @@ function Track(){
         <div className='color'>
             
             <Header/>
+            
             {!formSubmitted ? (
                 <div>
+                    <h1>Track Your Daily Mood</h1>
                     <span>
                         <h3 id='date'>{now}</h3>
                     </span>
@@ -110,7 +112,7 @@ function Track(){
             ) : (
                 <div>
                     <span>
-                            <h3 id='date'>{now}</h3>
+                        <h3 id='date'>{now}</h3>
                     </span>
                     <h1>Daily Form Done!</h1>
                 </div>
