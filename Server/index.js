@@ -102,9 +102,15 @@ app.post('/initialize', (req, res) => {
     }) 
 });
 
+app.get('/userName', function(req, res){
+    con.query('SELECT user_name FROM user', function(err, rows){
+        res.send(rows)
+    })
+})
+
 app.get('/user/:user_name', function(req, res){
-    con.query('SELECT * FROM user WHERE user_name = ?', [req.params.user_name], function(err, row){
-        res.send(row);
+    con.query('SELECT * FROM user WHERE user_name = ?', [req.params.user_name], function(err, rows){
+        res.send(rows);
     });
 });
 
