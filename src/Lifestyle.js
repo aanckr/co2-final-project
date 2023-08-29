@@ -56,7 +56,7 @@ function Lifestyle ({setDietaryHabits, setActivityTime, setTobaccoUse, setAlcoho
                 </label>
 
                 <label className="btn-labeling">
-                    <input className="track-btn" type="radio" name="drugs" onChange={(e) => setDrugUse('No')}/>
+                    <input id="last-field" className="track-btn" type="radio" name="drugs" onChange={(e) => setDrugUse('No')}/>
                     No
                 </label>
 

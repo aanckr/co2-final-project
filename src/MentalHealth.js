@@ -11,16 +11,37 @@ function MentalHealth ({setGeneralMood, setStressLevel, setSleepQualtiy, setSlee
                 <label className="track-labeling"> 
                     How is your mood? <br/>
                     <input type="range" min={1} max={5} onChange={(e) => setGeneralMood(e.target.value)}/>
+                    <div className="emojis">
+                        <div className="item">😡</div>
+                        <div className="item">😔</div>
+                        <div className="item">😐</div>
+                        <div className="item">😃</div>
+                        <div className="item">🤩</div>
+                    </div>
                 </label> <br/>
 
                 <label className="track-labeling">
                     How was your stress level? <br/>
                     <input type="range" min={1} max={5} onChange={(e) => setStressLevel(e.target.value)} />
+                    <div className="emojis">
+                        <div className="item">😡</div>
+                        <div className="item">😔</div>
+                        <div className="item">😐</div>
+                        <div className="item">😃</div>
+                        <div className="item">🤩</div>
+                    </div>
                 </label> <br/>
 
                 <label className="track-labeling">
                     How was your sleep quality? <br/>
                     <input type="range" min={1} max={5} onChange={(e) => setSleepQualtiy(e.target.value)} />
+                    <div className="emojis">
+                        <div className="item">😡</div>
+                        <div className="item">😔</div>
+                        <div className="item">😐</div>
+                        <div className="item">😃</div>
+                        <div className="item">🤩</div>
+                    </div>
                 </label> <br/>
 
                 <label className="track-labeling">
