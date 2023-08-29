@@ -27,12 +27,14 @@ h1{
     }
 
     .track-labeling{
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .field, .last-field{
         padding: 5px 20px;
-        margin: 10px 35%;
+        margin: 20px 35%;
         margin-bottom: 20px;
         width: 30%;
         height: 50px;
@@ -42,7 +44,7 @@ h1{
         box-shadow: 0 0 5px 0 black;
     }
 
-    .last-field{
+    .last-field, #last-field{
         margin-bottom: 40px;
     }
 
@@ -76,13 +78,19 @@ h1{
     }
     
     .btn-labeling{
-        padding-left: 30px;
-        align-items: center;
+        padding-left: 45%;
     }
 
     .track-btn{
-        margin-right: 20px;
-        width: auto;
-        margin-left: 40%;
+        margin: 10px;
+    }
+
+    .emojis{
+        width: 45%;
+        margin: -15px 0 20px 65px;
     }
    
+    .item{
+        display: inline;
+        margin-right: 15.2%;
+    }
