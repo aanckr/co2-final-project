@@ -24,16 +24,16 @@ function Profile() {
     //Show user data
     let {user_name} = useParams();
 
-    const [user, setUser] = React.useState([0]);
+    const [user, setUser] = React.useState([]);
 
     useEffect(() => {
         const dataFetch = async () => {
-          const response = await fetch(`http://localhost:3001/user/${user_name}`)
-  
+          const response = await fetch(`http://localhost:3001/user/${user_name}`);
           const data = await response.json();
-          setUser(data);
+          setUser(data[0]);
+          console.log(data)
         };
-          dataFetch();
+        dataFetch();
     },[user_name]);
 
   return (
@@ -46,32 +46,32 @@ function Profile() {
 
         <label className="labeling">
             Name
-            <input placeholder={user[0].name} className="field" type="text"  /> <br />
+            <input placeholder={user.name} className="field" type="text"  /> <br />
         </label>
 
         <label className="labeling">
             Email
-            <input placeholder={user[0].email} className="field" type="email" /> <br />
+            <input placeholder={user.e_mail} className="field" type="email" /> <br />
         </label>
 
         <label className="labeling">
             Date of Birth
-            <input placeholder={user[0].birthdate} id="field" type="text" label="Date of Birth" /> <br />
+            <input placeholder={user.birthdate} id="field" type="text" label="Date of Birth" /> <br />
         </label>
 
         <label className="labeling">
             Height
-            <input placeholder={user[0].height} className="field" type="number"/> <br />
+            <input placeholder={user.height} className="field" type="number"/> <br />
         </label>
 
         <label className="labeling">
             Weight
-            <input placeholder={user[0].weight} className="field" type="number" /> <br />
+            <input placeholder={user.weight} className="field" type="number" /> <br />
         </label>
 
         <label className="labeling">
             Sex
-            <input placeholder={user[0].sex} className="field" list="sex" name="sex" />
+            <input placeholder={user.sex} className="field" list="sex" name="sex" />
             <datalist id="sex" >
                 <option value="Female" />
                 <option value="Male" />

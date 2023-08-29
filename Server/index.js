@@ -103,8 +103,8 @@ app.post('/initialize', (req, res) => {
 });
 
 app.get('/user/:user_name', function(req, res){
-    con.query('SELECT * FROM user', function(err, rows){
-        res.send(rows);
+    con.query('SELECT * FROM user WHERE user_name = ?', [req.params.user_name], function(err, row){
+        res.send(row);
     });
 });
 
