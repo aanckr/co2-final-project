@@ -28,53 +28,57 @@ function LifestyleInformation(){
     };
 
     return (
-    <div>
-        <label>
-            <input type="checkbox" checked={showLines.dietary_habits} onChange={() => toggleLine('dietary_habits')}/>
-            Dietary Habits
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.activity_time} onChange={() => toggleLine('activity_time')} />
-            Activity Time
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.tobacco_use} onChange={() => toggleLine('tobacco_use')} />
-            Tobacco Use
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.alcohol_consumption} onChange={() => toggleLine('alcohol_consumption')} />
-            Alcohol Consumption
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.drug_use} onChange={() => toggleLine('drug_use')} />
-            Drug Use
-        </label>
+        <div id="lifestyle-information">
+            <h3 id="analysis-headline">Lifestyle Information</h3>
 
-        <LineChart
-            width={1200}
-            height={500}
-            data={lifestyle}
-            margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5
-            }}
-        >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis yAxisId="left" orientation="left" dataKey="activity_time"/>
-            <YAxis yAxisId="right" orientation="right" type="category" dataKey="dietary_habits" />
-            <YAxis yAxisId="right2" orientation="right" type="category" dataKey="tobacco_use" />
-            <Tooltip />
-            <Legend />
-            {showLines.dietary_habits && <Line type="monotone" yAxisId="right" dataKey="dietary_habits" stroke="#8884d8" />}
-            {showLines.activity_time && <Line type="monotone" yAxisId="left"  dataKey="activity_time" stroke="#82ca9d" />}
-            {showLines.tobacco_use && <Line type="monotone" yAxisId="right2" dataKey="tobacco_use" stroke="#d884b0" />}
-            {showLines.alcohol_consumption && <Line type="monotone" yAxisId="right2" dataKey="alcohol_consumption" stroke="#84c0d8" />}
-            {showLines.drug_use && <Line type="monotone" yAxisId="right2" dataKey="drug_use" stroke="#d8a484" />}
-        </LineChart>
-    </div>
+            <div className="check">
+                <label>
+                    <input type="checkbox" checked={showLines.dietary_habits} onChange={() => toggleLine('dietary_habits')}/>
+                    Dietary Habits
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.activity_time} onChange={() => toggleLine('activity_time')} />
+                    Activity Time
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.tobacco_use} onChange={() => toggleLine('tobacco_use')} />
+                    Tobacco Use
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.alcohol_consumption} onChange={() => toggleLine('alcohol_consumption')} />
+                    Alcohol Consumption
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.drug_use} onChange={() => toggleLine('drug_use')} />
+                    Drug Use
+                </label>
+            </div>
+
+            <LineChart id="line-chart"
+                width={1000}
+                height={500}
+                data={lifestyle}
+                margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis yAxisId="left" orientation="left" dataKey="activity_time"/>
+                <YAxis yAxisId="right" orientation="right" type="category" dataKey="dietary_habits" />
+                <YAxis yAxisId="right2" orientation="right" type="category" dataKey="tobacco_use" />
+                <Tooltip />
+                <Legend />
+                {showLines.dietary_habits && <Line type="monotone" yAxisId="right" dataKey="dietary_habits" stroke="#8884d8" />}
+                {showLines.activity_time && <Line type="monotone" yAxisId="left"  dataKey="activity_time" stroke="#82ca9d" />}
+                {showLines.tobacco_use && <Line type="monotone" yAxisId="right2" dataKey="tobacco_use" stroke="#d884b0" />}
+                {showLines.alcohol_consumption && <Line type="monotone" yAxisId="right2" dataKey="alcohol_consumption" stroke="#84c0d8" />}
+                {showLines.drug_use && <Line type="monotone" yAxisId="right2" dataKey="drug_use" stroke="#d8a484" />}
+            </LineChart>
+        </div>
     );
 }
 
