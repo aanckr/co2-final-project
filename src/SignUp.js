@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SignUp.css';
 
 function SignUp(){
@@ -9,19 +9,43 @@ function SignUp(){
     const [userName, setUserName]= React.useState('');
     const [password, setPassword]= React.useState('');
     const [repeatPassword, setRepeatPassword]= React.useState('');
+
+    const [user, setUser]= React.useState();
+
+    useEffect(() => {
+        
+        const dataFetch = async () => {
+            const response = await fetch(`http://localhost:3001/userName`)
+            const data = await response.json();
+            
+            setUser(data);
+        };
+        dataFetch();
+    }, []);
     
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        
         const finalBirthdate = birthdate ? birthdate : null;
         const finalSex = sex ? sex : null;
+
+        var userNameExists = false
+        user.forEach(u => {
+            if (userName === u.user_name){
+                userNameExists = true;
+            };
+        });
         
+
         if (!name || !userName || !email || !password || !repeatPassword) {
             alert('Please fill out all required sign-up-fields (*).');
             return;
         } else if (password !== repeatPassword) {
             alert('Passwords do not match.');
             return;
+        } else if (userNameExists){   
+            alert('User Name already exist.');
+            return; 
         } else {
             window.location.href = 'http://localhost:3000/LogIn'
         }   
@@ -36,7 +60,6 @@ function SignUp(){
             const response = await fetch("http://localhost:3001/user",requestOptions)
             const data = response.json();
 
-            console.log (data);
         }
         dataFetch();
     };
