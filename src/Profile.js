@@ -140,6 +140,8 @@ function Profile() {
         }
         <button className='save-button'>Save</button> 
 
+        <a id="log-out" onClick={() => window.location.href = `http://localhost:3000`}>Log Out</a>
+
        
 
     </form>
