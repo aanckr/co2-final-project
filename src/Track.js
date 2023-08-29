@@ -113,6 +113,7 @@ function Track(){
                             <h3 id='date'>{now}</h3>
                     </span>
                     <h1>Daily Form Done!</h1>
+                    <br/><br/><br/><br/><br/>
                 </div>
             )}
             <Footer/>   
