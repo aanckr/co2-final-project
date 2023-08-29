@@ -52,7 +52,7 @@ function SignUp(){
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: finalBirthdate, height: null, weight: null, sex: finalSex, semester: null, course: null})
+            body: JSON.stringify({userName: userName, password: password, name: name, email: email, birthdate: finalBirthdate, height: null, weight: null, sex: finalSex, semester: null, degree: null, course: null})
         };
         
         const dataFetch = async () => {

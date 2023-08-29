@@ -1,8 +1,8 @@
 -- Inserting a sample user
 INSERT INTO user 
-(user_name, password, name, e_mail, birthdate, height, weight, sex, semester, course_of_study) 
+(user_name, password, name, e_mail, birthdate, height, weight, sex, semester, degree, course_of_study) 
 VALUES 
-('John', 'pass1234', 'John Doe', 'john.doe@email.com', '1995-02-15', 180, 75, 'Male', 5, 'Computer Science');
+('John', 'pass1234', 'John Doe', 'john.doe@email.com', '1995-02-15', 180, 75, 'Male', 5, 'Bachelor', 'Coding and Software Engineering');
 
 -- Inserting 14 sample rows into mental_health table
 INSERT INTO mental_health 

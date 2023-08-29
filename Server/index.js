@@ -44,6 +44,7 @@ app.post('/initialize', (req, res) => {
         height INT,
         weight INT,
         sex ENUM('Male', 'Female', 'Diverse'),
+        degree ENUM('Bachelor', 'Master'),
         semester INT,
         course_of_study VARCHAR(40)  
     );`;    
@@ -115,15 +116,15 @@ app.get('/user/:user_name', function(req, res){
 });
 
 app.post('/user', function(req, res){
-    const {userName, password, name, email, birthdate, height, weight, sex, semester, course} = req.body
+    const {userName, password, name, email, birthdate, height, weight, sex, semester, degree, course} = req.body
     
     if(userName == null || name == null || email == null) {
         res.json({error:'User Name, Name or E-Mail is missing.'});
         return;
     };
     
-    const sql = 'INSERT INTO user (user_name, password, name, e_mail, birthdate, height, weight, sex, semester, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
-    con.query(sql, [userName, password, name, email, birthdate, height, weight, sex, semester, course], function(err, result){
+    const sql = 'INSERT INTO user (user_name, password, name, e_mail, birthdate, height, weight, sex, semester, degree, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    con.query(sql, [userName, password, name, email, birthdate, height, weight, sex, semester, degree, course], function(err, result){
         if(err) throw err;
         res.json({status: 'New user created'});
     })
