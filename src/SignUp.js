@@ -77,7 +77,6 @@ function SignUp(){
                         <option value='Male'>Male</option>
                         <option value='Female'>Female</option>
                         <option value='Diverse'>Diverse</option>
-                        <option value='No comment'>No comment</option>
                     </select>
 
                     <input className="sign-up-field" type='text' placeholder='* User Name' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input>
