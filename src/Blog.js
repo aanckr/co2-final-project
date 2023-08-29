@@ -22,7 +22,7 @@ function Blog() {
     return (
         <div className='color'>
             <Header />
-            <h2 className='Blog-txt'>Tips for your best uni life and mental wellbeing.</h2>
+            <h1>Tips for your best Uni Life and Mental Wellbeing</h1>
             <p className='Blog-txt'>Discover our blog with valuable tips to make the most of your uni life and boost your mental health. Find inspiration for effective learning, stress management and more mindfulness in your everyday life.</p>
             <div className='Blog'>
                 <div className='Blog-entries'>

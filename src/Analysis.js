@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect } from 'react';
+import "./Analysis.css"
 import Header from "./Header";
 import MentalHealthInformation from "./MentalHealthInformation";
 import StudyAndWorkloadInformation from "./StudyAndWorkloadInformation";
 import LifestyleInformation from "./LifestyleInformation";
+import Footer from './Footer';
 
 function Analysis(){
     let { user_name } = useParams();
@@ -20,7 +22,7 @@ function Analysis(){
     },[user_name]);
     
     function renderEmoji(){
-        const emojisMood = [0x1F621, 0x1F613, 0x1F610, 0x1F603, 0x1F929];
+        const emojisMood = [0x1F613, 0x1F631, 0x1F610, 0x1F603, 0x1F929];
         const emojisTrend = [0x2197, 0x2198]
         
         if (mentalHealth[0]){
@@ -44,26 +46,18 @@ function Analysis(){
     };
       
     return (
-        <div>
+        <div className="color">
             <Header />
-            <br/>
-            <h3>General Feeling</h3>
-            <span>{renderEmoji()}</span>
-            <hr/>
+            <h1>General Feeling</h1>
+            <span id="analysis-emojis">{renderEmoji()}</span>
+           
+            <MentalHealthInformation />   
 
-            <h3>Mental Helth Information</h3>
-            <MentalHealthInformation />
-            <hr/>
+            <StudyAndWorkloadInformation />   
 
-            <h3>Study and Workload Information </h3>
-            <StudyAndWorkloadInformation />
-            <hr/>
-
-            <h3>Lifestyle Information</h3>
             <LifestyleInformation />
-            <hr/>
 
-            <h3>Intersting Blogs</h3>
+            <Footer />
         </div>
     )
 };
