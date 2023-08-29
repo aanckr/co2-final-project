@@ -5,10 +5,31 @@ import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 function Profile() {
+    let {user_name} = useParams();
 
-    //Handle bachelor and master buttons
+    const [user, setUser] = React.useState([]);
+
     const [bachelor, setBachelor] = useState(false);
     const [master, setMaster] = useState(false);
+    
+    const [name, setName]= React.useState('');
+    const [email, setEmail]= React.useState('');
+    const [height, setHeight]=  React.useState('');
+    const [weight, setWeight]= React.useState('');
+    const [sex, setSex]= React.useState('');
+    const [semester, setSemester]= React.useState('');
+    const [degree, setDegree]= React.useState('');
+    const [course, setCourse]= React.useState('');
+
+
+    useEffect(() => {
+        if (user.degree === 'Bachelor') {
+            setBachelor(true);
+        } else if (user.degree === 'Master'){
+            setMaster(true);
+        }
+    }, [user.degree]);
+    
 
     const handleBachelorClick = () => {
         setBachelor(true);
@@ -20,21 +41,56 @@ function Profile() {
         setMaster(true);
     };
 
-
-    //Show user data
-    let {user_name} = useParams();
-
-    const [user, setUser] = React.useState([]);
-
     useEffect(() => {
         const dataFetch = async () => {
           const response = await fetch(`http://localhost:3001/user/${user_name}`);
           const data = await response.json();
           setUser(data[0]);
-          console.log(data)
+        
+          setName(data[0].user_name);
+          setEmail(data[0].e_mail);
+          setHeight(data[0].height);
+          setWeight(data[0].weight);
+          setSex(data[0].sex);
+          setSemester(data[0].semester);
+          setDegree(data[0].degree);
+          setCourse(data[0].course_of_study);
         };
         dataFetch();
     },[user_name]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        const finalHeight = height ? height : null;
+        const finalWeight = weight ? weight : null;
+        const finalSex = sex ? sex : null;
+        const finalDegree = degree ? degree : null;
+        const finalSemester = semester ? semester : null;
+        const finalCourse = course ? course : null;
+
+        if (!name) {
+            setName(user.user_name);
+        };
+
+        if (!email) {
+            setEmail(user.e_mail);
+
+        };
+
+        const requestOptions = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({name: name, email: email, height: finalHeight, weight: finalWeight, sex: finalSex, semester: finalSemester, degree: finalDegree, course: finalCourse})
+        };
+        
+        const dataFetch = async () => {
+            const response = await fetch(`http://localhost:3001/user/${user_name}`,requestOptions)
+            const data = response.json();
+
+        }
+        dataFetch();
+    };
 
   return (
   <div className="color">
@@ -42,16 +98,16 @@ function Profile() {
 
     <h1>Your Personal Data</h1>
 
-    <form>
+    <form onSubmit={handleSubmit}>
 
         <label className="labeling">
             Name
-            <input placeholder={user.name} className="field" type="text"  /> <br />
+            <input placeholder={user.name} className="field" type="text"  onChange={(e) => setName(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
             Email
-            <input placeholder={user.e_mail} className="field" type="email" /> <br />
+            <input placeholder={user.e_mail} className="field" type="email" onChange={(e) => setEmail(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
@@ -61,17 +117,17 @@ function Profile() {
 
         <label className="labeling">
             Height
-            <input placeholder={user.height} className="field" type="number"/> <br />
+            <input placeholder={user.height} className="field" type="number" onChange={(e) => setHeight(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
             Weight
-            <input placeholder={user.weight} className="field" type="number" /> <br />
+            <input placeholder={user.weight} className="field" type="number" onChange={(e) => setWeight(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
             Sex
-            <input placeholder={user.sex} className="field" list="sex" name="sex" />
+            <input placeholder={user.sex} className="field" list="sex" name="sex" onChange={(e) => setSex(e.target.value)}/>
             <datalist id="sex" >
                 <option value="Female" />
                 <option value="Male" />
@@ -100,13 +156,13 @@ function Profile() {
             <div>
                 <label className="labeling">
                     Semester
-                    <input className="field" type="number" min="1" max="6" /> <br /> 
+                    <input placeholder={user.semester} className="field" type="number" min="1" max="6" onChange={(e) => setSemester(e.target.value)}/> <br /> 
                 </label>
 
                 <label className="labeling">
                     Bachelor Study Program
                     <div id="bachelor-list">
-                        <input className="field" list="study-program-bachelor" name="study-program-bachelor" />
+                        <input placeholder={user.course_of_study} className="field" list="study-program-bachelor" name="study-program-bachelor" onChange={(e) => setCourse(e.target.value)}/>
                         <datalist id="study-program-bachelor" >
                             <option value="Coding and Software Engineering" />
                             <option value="Data Science" />
@@ -123,13 +179,13 @@ function Profile() {
             <div>
                 <label className="labeling">
                     Semester
-                    <input className="field" type="number" min="1" max="4" /> <br /> 
+                    <input placeholder={user.semester} className="field" type="number" min="1" max="4" onChange={(e) => setSemester(e.target.value)}/> <br /> 
                 </label>
 
                 <label className="labeling">
                     Master Study Program
                     <div id="master-list">
-                        <input className="field" list="study-program-master" name="study-program-master" />
+                        <input placeholder={user.course_of_study} className="field" list="study-program-master" name="study-program-master" onChange={(e) => setCourse(e.target.value)}/>
                         <datalist id="study-program-master" >
                             <option value="Digital Transformation Management" />
                             <option value="Data Science" />
@@ -138,10 +194,7 @@ function Profile() {
                 </label>
             </div>
         }
-        <button className='save-button'>Save</button> 
-
-       
-
+        <button  type='submit' className='save-button'>Save</button> 
     </form>
 
     <Footer/>

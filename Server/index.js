@@ -118,16 +118,21 @@ app.get('/user/:user_name', function(req, res){
 app.post('/user', function(req, res){
     const {userName, password, name, email, birthdate, height, weight, sex, semester, degree, course} = req.body
     
-    if(userName == null || name == null || email == null) {
-        res.json({error:'User Name, Name or E-Mail is missing.'});
-        return;
-    };
-    
     const sql = 'INSERT INTO user (user_name, password, name, e_mail, birthdate, height, weight, sex, semester, degree, course_of_study) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
     con.query(sql, [userName, password, name, email, birthdate, height, weight, sex, semester, degree, course], function(err, result){
         if(err) throw err;
         res.json({status: 'New user created'});
     })
+});
+
+app.put('/user/:user_name', function(req, res){
+    const {name, email, height, weight, sex, semester, degree, course} = req.body
+
+    const sql = 'UPDATE user SET name = ?, e_mail = ?, height = ?, weight = ?, sex = ?, semester = ?, degree = ?, course_of_study = ? WHERE user_name = ?'
+    con.query(sql, [name, email, height, weight, sex, semester, degree, course, req.params.user_name], function(err, result){
+        if(err) throw err;
+        res.json({status: 'Updated user data'});
+    });
 });
 
 app.get('/userLogIns', function(req, res){
