@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SignUp.css';
 
 function SignUp(){
     const [name, setName]= React.useState('');
@@ -16,7 +17,7 @@ function SignUp(){
         const finalSex = sex ? sex : null;
         
         if (!name || !userName || !email || !password || !repeatPassword) {
-            alert('Please fill out all required fields (*).');
+            alert('Please fill out all required sign-up-fields (*).');
             return;
         } else if (password !== repeatPassword) {
             alert('Passwords do not match.');
@@ -41,27 +42,30 @@ function SignUp(){
     };
 
     return (
-        <div>
-            <h1>Mental Health Tracker</h1>
-            <form onSubmit={handleSubmit}>
-            <input type='text' placeholder='* Name' name='name' maxLength={20} value={name} onChange={(e) => setName(e.target.value)}></input><br></br>
-            <input type='email' placeholder='* Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}></input><br></br>
-            <input type='date' placeholder='Birthdate' name='birthdate' value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input><br></br>
-            <select name='sex' value={sex} onChange={(e) => setSex(e.target.value)}>
-                <option value='' disabled>Sex</option>
-                <option value='Male'>Male</option>
-                <option value='Female'>Female</option>
-                <option value='Diverse'>Diverse</option>
-            </select><br></br>
-            <br></br>
-            <input type='text' placeholder='* User Name' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input><br></br>
-            <input type='password' placeholder='* Password' name='password' minLength={4} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br>
-            <input type='password' placeholder='* Repeat Password' name='repeatPassword' minLength={4} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input><br></br>
-            <br></br>
-            <button type='submit'>Sign Up</button>
-        </form>
-        <hr/>
-        <button onClick={() => window.location.href = 'http://localhost:3000/LogIn'}>Log In</button>
+        <div className='color'>
+            <header></header>
+            <h1 id='mh-title'>Mental Health Tracker</h1>
+            <div id='sign-up'>
+                <form onSubmit={handleSubmit}>
+                    <input className="sign-up-field" id='first-field' type='text' placeholder='* Name' name='name' maxLength={20} value={name} onChange={(e) => setName(e.target.value)}></input>
+                    <input className="sign-up-field" type='email' placeholder='* Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <input className="sign-up-field" type='date' placeholder='Birthdate' name='birthdate' value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input>
+                    <select className="sign-up-field" placeholder='Sex' name='sex' onChange={(e) => setSex(e.target.value)}>
+                        <option value='Male'>Male</option>
+                        <option value='Female'>Female</option>
+                        <option value='Diverse'>Diverse</option>
+                        <option value='No comment'>No comment</option>
+                    </select>
+
+                    <input className="sign-up-field" type='text' placeholder='* User Name' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input>
+                    <input className="sign-up-field" type='password' placeholder='* Password' name='password' minLength={4} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                    <input className="sign-up-field" type='password' placeholder='* Repeat Password' name='repeatPassword' minLength={4} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input>
+
+                    <button className="save-button" id='sign-up-btn' type='submit'>Sign Up</button>
+                </form>
+            </div>
+            <p id='no-account'>Already have an account?</p>
+            <button className="save-button" id='log-in-btn' onClick={() => window.location.href = 'http://localhost:3000/LogIn'}>Log In</button>
         </div>
     );
 }
