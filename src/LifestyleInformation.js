@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-function LifestyleInformation(){
+function LifestyleInformation(props){
     let { user_name } = useParams();
     const [lifestyle, setLifestyle] = useState([]);
     const [showLines, setShowLines] = useState({
@@ -55,8 +55,8 @@ function LifestyleInformation(){
             </div>
 
             <LineChart id="line-chart"
-                width={1000}
-                height={500}
+                width={props.width}
+                height={props.height}
                 data={lifestyle}
                 margin={{
                     top: 5,

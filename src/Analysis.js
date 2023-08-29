@@ -51,11 +51,11 @@ function Analysis(){
             <h1>General Feeling</h1>
             <span id="analysis-emojis">{renderEmoji()}</span>
            
-            <MentalHealthInformation />   
+            <MentalHealthInformation width={1000} height={500}/>   
 
-            <StudyAndWorkloadInformation />   
+            <StudyAndWorkloadInformation width={1000} height={500}/>   
 
-            <LifestyleInformation />
+            <LifestyleInformation width={1000} height={500}/>
 
             <Footer />
         </div>

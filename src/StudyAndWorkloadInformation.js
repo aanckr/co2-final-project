@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-function StudyAndWorkloadInformation(){
+function StudyAndWorkloadInformation(props){
     let { user_name } = useParams();
     const [studyAndWorkload, setStudyAndWorkload] = useState([]);
     const [showLines, setShowLines] = useState({
@@ -44,8 +44,8 @@ function StudyAndWorkloadInformation(){
             </div>
 
             <LineChart id="line-chart"
-                width={1000}
-                height={500}
+                width={props.width}
+                height={props.height}
                 data={studyAndWorkload}
                 margin={{
                     top: 5,

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-function MentalHealthInformation(){
+function MentalHealthInformation(props){
     let { user_name } = useParams();
     const [mentalHealth, setMentalHealth] = useState([]);
     const [showLines, setShowLines] = useState({
@@ -49,8 +49,8 @@ function MentalHealthInformation(){
             </div>
 
             <LineChart id="line-chart"
-                width={1000}
-                height={500}
+                width={props.width}
+                height={props.height}
                 data={mentalHealth}
             >
                 <CartesianGrid strokeDasharray="3 3" />
