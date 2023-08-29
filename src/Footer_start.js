@@ -18,7 +18,7 @@ function Footer_start() {
             <div className="footer-col-2">
                 <h3>NEWSLETTER</h3>
                 <form >
-                    <input type="email" placeholder="Your Email Address" required></input>
+                    <input id="email" type="email" placeholder="Your Email Address" required></input>
                     <br />
                     <button className='button-news' type="submit">SUBSCRIBE NOW</button>
                 </form>
