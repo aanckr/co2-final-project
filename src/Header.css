@@ -1,6 +1,6 @@
 #navigation{
     font-size: 1.2em;
-    margin: 20px 10%;
+    margin: 20px 0 100px 10%;
     width: 65%;
     height: 70px;
     border-radius: 70px;
@@ -26,7 +26,8 @@
   #profile-picture{
     height: 70px;
     width: 70px;
-    margin: 20px 15% 20px 85%;
+    float: right;
+    margin: 20px 10% 20px 0;
     border-radius: 70px;
     box-shadow: 0 0 5px 0 black;
     background-color: white;

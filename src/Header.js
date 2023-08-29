@@ -23,10 +23,9 @@ function Header() {
           </li>
         </ul>
       </nav>
-
       <div id="profile-picture">
-      <a onClick={() => window.location.href = `http://localhost:3000/Profile/${user_name}`}><img src={profilePicture}  alt="Profile Picture" /></a>
-      </div>
+        <a onClick={() => window.location.href = `http://localhost:3000/Profile/${user_name}`}><img src={profilePicture}  alt="Profile Picture" /></a>
+        </div>
     </div>
   );
 }
