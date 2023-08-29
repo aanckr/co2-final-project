@@ -25,41 +25,45 @@ function StudyAndWorkloadInformation(){
     };
 
     return (
-    <div>
-        <label>
-            <input type="checkbox" checked={showLines.study_time} onChange={() => toggleLine('study_time')}/>
-            Study Time on Campus
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.learning_time} onChange={() => toggleLine('learning_time')} />
-            Study Time at Home
-        </label>
-        <label>
-            <input type="checkbox" checked={showLines.work_time} onChange={() => toggleLine('work_time')} />
-            Work Time
-        </label>
+        <div id="study-and-workload-information">
+            <h3 id="analysis-headline">Study and Workload Information </h3>
 
-        <LineChart
-            width={1200}
-            height={500}
-            data={studyAndWorkload}
-            margin={{
-                top: 5,
-                right: 30,
-                left: 20,
-                bottom: 5
-            }}
-        >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            {showLines.study_time && <Line type="monotone" dataKey="study_time" stroke="#8884d8" />}
-            {showLines.learning_time && <Line type="monotone" dataKey="learning_time" stroke="#82ca9d" />}
-            {showLines.work_time && <Line type="monotone" dataKey="work_time" stroke="#d884b0" />}
-        </LineChart>
-    </div>
+            <div className="check">
+                <label>
+                    <input type="checkbox" checked={showLines.study_time} onChange={() => toggleLine('study_time')}/>
+                    Study Time on Campus
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.learning_time} onChange={() => toggleLine('learning_time')} />
+                    Study Time at Home
+                </label>
+                <label>
+                    <input type="checkbox" checked={showLines.work_time} onChange={() => toggleLine('work_time')} />
+                    Work Time
+                </label>
+            </div>
+
+            <LineChart id="line-chart"
+                width={1000}
+                height={500}
+                data={studyAndWorkload}
+                margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5
+                }}
+            >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                {showLines.study_time && <Line type="monotone" dataKey="study_time" stroke="#8884d8" />}
+                {showLines.learning_time && <Line type="monotone" dataKey="learning_time" stroke="#82ca9d" />}
+                {showLines.work_time && <Line type="monotone" dataKey="work_time" stroke="#d884b0" />}
+            </LineChart>
+        </div>
     );
 }
 
