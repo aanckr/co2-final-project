@@ -56,14 +56,20 @@ function BlogRecommendations (){
     var imgValue = blogImages[random];
     var linkValue = blogPostsLinks[random];
     
+    
 
+    const link = () => {
+        console.log(linkValue);
+        window.location.href = linkValue;
+    };
+    
 
     return (
         <div id="blog-recommendations">
 
             <h3 className="overview-headline">Blog Recommendations</h3>
 
-            <span onClick={() => window.location.href = {linkValue}}>
+            <span onClick={link}>
                 {blogValue}
             </span>
     
