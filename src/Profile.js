@@ -75,8 +75,9 @@ function Profile() {
 
         if (!email) {
             setEmail(user.e_mail);
-
         };
+
+
 
         const requestOptions = {
             method: 'PUT',
@@ -90,6 +91,8 @@ function Profile() {
 
         }
         dataFetch();
+
+        window.location.href = `http://localhost:3000/Profile/${user_name}`
     };
 
   return (
