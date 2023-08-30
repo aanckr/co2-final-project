@@ -58,8 +58,14 @@ function Profile() {
         const dataFetch = async () => {
           const response = await fetch(`http://localhost:3001/user/${user_name}`);
           const data = await response.json();
+
+          if (data[0].birthdate) {
+            const formattedDate = data[0].birthdate.split("T")[0];
+            data[0].birthdate = formattedDate;
+          }
+
           setUser(data[0]);
-        
+
           setName(data[0].user_name);
           setEmail(data[0].e_mail);
           setHeight(data[0].height);

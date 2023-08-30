@@ -94,3 +94,8 @@ h1{
         display: inline;
         margin-right: 15.2%;
     }
+
+    #daily-form{
+        margin-top: 200px;
+        margin-bottom: 250px;
+    }

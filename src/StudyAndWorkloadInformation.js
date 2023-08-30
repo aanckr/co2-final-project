@@ -15,6 +15,14 @@ function StudyAndWorkloadInformation(props){
         const dataFetch = async () => {
           const response = await fetch(`http://localhost:3001/studyandworkload/${user_name}`)
           const data = await response.json();
+
+          for (const row of data){
+            if (row.date) {
+                const formattedDate = row.date.split("T")[0];
+                row.date = formattedDate;
+            };
+          };
+          
           setStudyAndWorkload(data.reverse());
         };
         dataFetch();
