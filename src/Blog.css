@@ -14,8 +14,9 @@
     padding-bottom: 10px;
     border-width: 5px;
     border-style: solid;
-    border-radius: 2em;
     border: none;
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 70px;
     background-color: rgba(250, 250, 250, 0.7);
   }
   
@@ -49,6 +50,7 @@
     padding: 20px;
     margin: 10px;
     width: 25%;
+    box-shadow: 0 0 5px 0 black;
   }
   
   .entrie-topic{
