@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './SignUp.css';
 
 function SignUp(){
@@ -66,28 +66,62 @@ function SignUp(){
 
     return (
         <div className='color'>
-            <header></header>
-            <h1 id='mh-title'>Mental Health Tracker</h1>
-            <div id='sign-up'>
-                <form onSubmit={handleSubmit}>
-                    <input className="sign-up-field" id='first-field' type='text' placeholder='* Name' name='name' maxLength={20} value={name} onChange={(e) => setName(e.target.value)}></input>
-                    <input className="sign-up-field" type='email' placeholder='* Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                    <input className="sign-up-field" type='date' placeholder='Birthdate' name='birthdate' value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input>
-                    <select className="sign-up-field" placeholder='Sex' name='sex' onChange={(e) => setSex(e.target.value)}>
-                        <option value='Male'>Male</option>
-                        <option value='Female'>Female</option>
-                        <option value='Diverse'>Diverse</option>
-                    </select>
 
-                    <input className="sign-up-field" type='text' placeholder='* User Name' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input>
-                    <input className="sign-up-field" type='password' placeholder='* Password' name='password' minLength={4} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)}></input>
-                    <input className="sign-up-field" type='password' placeholder='* Repeat Password' name='repeatPassword' minLength={4} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input>
+            <h1 className='mh-title'>Mental Health Tracker</h1>
+
+            <div id='sign-up'>
+
+                <form onSubmit={handleSubmit}>
+
+                    <br /><br />
+                    <label className="sign-up-labeling">
+                        * Name
+                        <input className="sign-up-field" type='text' name='name' maxLength={20} value={name} onChange={(e) => setName(e.target.value)}></input>
+                    </label>
+
+                    <label className="sign-up-labeling">
+                        * Email
+                        <input className="sign-up-field" type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    </label>
+
+                    <label className="sign-up-labeling">
+                        Date of Birth
+                        <input className="sign-up-field" type='date' name='birthdate' value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input>
+                    </label>
+
+                    <label className="sign-up-labeling">
+                        Sex
+                        <select className="sign-up-field" name='sex' onChange={(e) => setSex(e.target.value)}>
+                            <option value='Male'>Male</option>
+                            <option value='Female'>Female</option>
+                            <option value='Diverse'>Diverse</option>
+                        </select>
+                    </label>
+
+                    <br /><br /><br /><br /><br />
+
+                    <label className="sign-up-labeling">
+                        * User Name
+                        <input className="sign-up-field" type='text' name='userName' maxLength={10} value={userName} onChange={(e) => setUserName(e.target.value)}></input>
+                    </label>
+
+                    <label className="sign-up-labeling">
+                        * Password
+                        <input className="sign-up-field" type='password' name='password' minLength={4} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                    </label>
+
+                    <label className="sign-up-labeling">
+                        * Repeat Password
+                        <input className="sign-up-field" type='password' name='repeatPassword' minLength={4} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input>
+                    </label>
 
                     <button className="save-button" id='sign-up-btn' type='submit'>Sign Up</button>
                 </form>
             </div>
-            <p id='no-account'>Already have an account?</p>
+
+            <p id='have-account'>Already have an account?</p>
             <button className="save-button" id='log-in-btn' onClick={() => window.location.href = 'http://localhost:3000/LogIn'}>Log In</button>
+            
         </div>
     );
 }
