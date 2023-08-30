@@ -22,6 +22,11 @@ h1{
   }
 
   #message{
-    padding: 5%;
-    font-size: 1.1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.5em;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
