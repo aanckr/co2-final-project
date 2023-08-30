@@ -1,3 +1,4 @@
+import './LogIn.css'
 import React, { useState, useEffect } from 'react';
 
 function LogIn () {
@@ -40,16 +41,30 @@ function LogIn () {
     }, []);
 
     return (
-     <div>
-        <h1>Mental Health Tracker</h1>
-        <form onSubmit={handleSubmit}>
-            <input type='text' placeholder='User Name' name='userName' value={userName} onChange={(e) => setUserName(e.target.value)}></input><br></br>
-            <input type='password' placeholder='Password' name='password' value={password} onChange={(e) => setPassword(e.target.value)}></input><br></br>
-            <button type='submit'>Log In</button>
-        </form>
-        <hr/>
-        <button onClick={() => window.location.href = 'http://localhost:3000/SignUp'}>Sign Up</button>
-     </div>   
+        <div className='color'>
+
+            <h1 className='mh-title'>Mental Health Tracker</h1>
+
+            <div id='log-in'>
+                <form onSubmit={handleSubmit}>
+
+                    <br /><br /><br /><br />
+                    <label className="log-in-labeling">
+                        User Name
+                        <input className="log-in-field" type='text' name='userName' value={userName} onChange={(e) => setUserName(e.target.value)}></input>
+                    </label>
+
+                    <label className="log-in-labeling">
+                        Password
+                        <input className="log-in-field" type='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                    </label>
+                    <button className="save-button" id='log-btn' type='submit'>Log In</button>
+                </form>
+            </div>
+
+            <p id='no-account'>No account yet?</p>
+            <button className="save-button" id='sign-btn' onClick={() => window.location.href = 'http://localhost:3000/SignUp'}>Sign Up</button>
+        </div>   
    );
 }
 
