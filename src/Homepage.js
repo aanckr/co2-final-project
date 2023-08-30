@@ -4,7 +4,7 @@ import HeaderStart from './HeaderStart';
 function Homepage() {
     return (
         <div className='color'>
-                        < HeaderStart/>
+            < HeaderStart />
             <div className='color_box'>
                 <div className='text_box'>
                     <sectin>
@@ -33,7 +33,7 @@ function Homepage() {
                     </section>
                 </div>
             </div>
-            < FooterStart/>
+            < FooterStart />
         </div>
     );
 }
