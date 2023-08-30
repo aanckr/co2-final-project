@@ -1,5 +1,4 @@
 import Footer from './Footer';
-import Cookie from './Cookie';
 const React = require('react');
 
 
