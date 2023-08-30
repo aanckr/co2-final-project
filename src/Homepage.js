@@ -33,7 +33,7 @@ function Homepage() {
                     </section>
                 </div>
             </div>
-            < FooterStart />
+            <FooterStart />
         </div>
     );
 }
