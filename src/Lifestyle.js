@@ -30,7 +30,7 @@ function Lifestyle ({setDietaryHabits, setActivityTime, setTobaccoUse, setAlcoho
                     <input className="track-btn" type="radio" name="tobacco" onChange={(e) => setTobaccoUse('Yes')}/>
                     Yes
                 </label>
-
+                <br/>
                 <label className="btn-labeling">
                     <input className="track-btn" type="radio" name="tobacco" onChange={(e) => setTobaccoUse('No')}/>
                     No
@@ -42,7 +42,7 @@ function Lifestyle ({setDietaryHabits, setActivityTime, setTobaccoUse, setAlcoho
                     <input className="track-btn" type="radio" name="alcohol" onChange={(e) => setAlcoholConsumption('Yes')}/>
                     Yes
                 </label>
-
+                <br/>
                 <label className="btn-labeling">
                     <input className="track-btn" type="radio" name="alcohol" onChange={(e) => setAlcoholConsumption('No')}/>
                     No
@@ -54,7 +54,7 @@ function Lifestyle ({setDietaryHabits, setActivityTime, setTobaccoUse, setAlcoho
                     <input className="track-btn" type="radio" name="drugs" onChange={(e) => setDrugUse('Yes')}/>
                     Yes
                 </label>
-
+                <br/>
                 <label className="btn-labeling">
                     <input id="last-field" className="track-btn" type="radio" name="drugs" onChange={(e) => setDrugUse('No')}/>
                     No
