@@ -28,7 +28,11 @@ Terminal:
 
 ### Start dynamic web application/ frontend
 open console of console of co2-web-dev-final-project-pluto :
-    npm start
+    install react-scripts:
+        npm install react-scripts --save
+
+    start Website:
+        npm start
 
 
 ## Second Start
