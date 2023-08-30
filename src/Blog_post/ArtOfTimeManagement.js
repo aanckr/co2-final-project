@@ -8,7 +8,7 @@ function ArtOfTimeManagement() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>The art of time management</h1>
+                    <h1>The Art of Time Management</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 16, 2023</h6>
                     <p>Time management is key to successful study and a balanced life. In this blog entry,

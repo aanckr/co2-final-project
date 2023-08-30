@@ -8,7 +8,7 @@ function PhysicalActivityAffectsMentalHealth() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>How physical activity affects mental health</h1>
+                    <h1>How Physical Activity Affects Mental Health</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 20, 2023</h6>
                     <p>The strong link between physical activity and mood is well documented. In this entry, 

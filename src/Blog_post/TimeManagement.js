@@ -8,7 +8,7 @@ function TimeManagment() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>Time management and stress reduction</h1>
+                    <h1>Time Management and Stress Reduction</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 26, 2023</h6>
                     <p>Student life is often filled with a busy schedule, many tasks, and numerous commitments.

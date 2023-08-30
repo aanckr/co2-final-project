@@ -8,7 +8,7 @@ function InterplayOfMemory() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>The interplay of memory and learning strategies</h1>
+                    <h1>The Interplay of Memory and Learning Strategies</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 18, 2023</h6>
                     <p>Learning is a complex process that is inextricably linked to memory. Our ability 

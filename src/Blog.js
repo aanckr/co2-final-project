@@ -51,19 +51,19 @@ function Blog() {
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/time_management/${user_name}`}>
                             <img src={TimeManagement} alt="Time management and stress reduction" />
                             <div className="entrie-topic">
-                                <p>Time management and stress reduction</p>
+                                <p>Time Management and Stress Reduction</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/relaxation_techniques/${user_name}`}>
                             <img src={RelaxationTechniques} alt="Relaxation techniques for stressful study life" />
                             <div className="entrie-topic">
-                                <p>Relaxation techniques for stressful study life</p>
+                                <p>Relaxation Techniques for Stressful Study Life</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/importance_of_breaks/${user_name}`}>
                             <img src={ImportanceOfBreaks} alt="The importance of breaks and social support" />
                             <div className="entrie-topic">
-                                <p>The importance of breaks and social support</p>
+                                <p>The Importance of Breaks and Social Support</p>
                             </div>
                         </div>
                     </section>
@@ -72,19 +72,19 @@ function Blog() {
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/art_of_time_management/${user_name}`}>
                             <img src={ArtOfTimeManagement} alt="The art of time management" />
                             <div className="entrie-topic">
-                                <p>The art of time management</p>
+                                <p>The Art of Time Management</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/organization_tips/${user_name}`}>
                             <img src={OrganizationTips} alt="Organization tips for an orderly study day" />
                             <div className="entrie-topic">
-                                <p>Organization tips for an orderly study day</p>
+                                <p>Organization Tips for an Orderly Study Day</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/time_efficiency/${user_name}`}>
                             <img src={TimeEfficiency} alt="Time efficiency in your studies" />
                             <div className="entrie-topic">
-                                <p>Time efficiency in your studies</p>
+                                <p>Time Efficiency in Your Studies</p>
                             </div>
                         </div>
                     </section>
@@ -99,13 +99,13 @@ function Blog() {
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/interplay_of_memory/${user_name}`}>
                             <img src={InterplayOfMemory} alt="The interplay of memory and learning strategies" />
                             <div className="entrie-topic">
-                                <p>The interplay of memory and learning strategies</p>
+                                <p>The Interplay of Memory and Learning Strategies</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/power_of_metacognition/${user_name}`}>
                             <img src={PowerOfMetacognition} alt="The power of metacognition" />
                             <div className="entrie-topic">
-                                <p>The power of metacognition</p>
+                                <p>The Power of Metacognition</p>
                             </div>
                         </div>
                     </section>
@@ -114,13 +114,13 @@ function Blog() {
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/physical_activity_and_mental_health/${user_name}`}>
                             <img src={PhysicalActivityAndMentalHealth} alt="The link between physical activity and mental health" />
                             <div className="entrie-topic">
-                                <p>The link between physical activity and mental health</p>
+                                <p>The Link Between Physical Activity and Mental Health</p>
                             </div>
                         </div>
                         <div className="entries" onClick={() => window.location.href = `http://localhost:3000/Blog/physical_activity_affects_mental_health/${user_name}`}>
                             <img src={PhysicalActivityAffectsMentalHealth} alt="How physical activity affects mental health" />
                             <div className="entrie-topic">
-                                <p>How physical activity affects mental health</p>
+                                <p>How Physical Activity Affects Mental Health</p>
                             </div>
                         </div>
                     </section>

@@ -8,7 +8,7 @@ function RelaxationTechniques() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>Relaxation techniques for stressful study life</h1>
+                    <h1>Relaxation Techniques for Stressful Study Life</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 23, 2023</h6>
                     <p>The stressful day-to-day life of studying can often overwhelm you and keep you from doing

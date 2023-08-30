@@ -8,7 +8,7 @@ function PowerOfMetacognition() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>The power of metacognition</h1>
+                    <h1>The Power of Metacognition</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 22, 2023</h6>
                     <p>Have you ever wondered how you could learn better?</p>

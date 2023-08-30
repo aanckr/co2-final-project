@@ -8,7 +8,7 @@ function TimeEfficiency() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>Time efficiency in your studies</h1>
+                    <h1>Time Efficiency in Your Studies</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 25, 2023</h6>
                     <p>Using your study time efficiently is crucial to getting the most out of your

@@ -8,7 +8,7 @@ function PhysicalActivityAndMentalHealth() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>The link between physical activity and mental health</h1>
+                    <h1>The Link Between Physical Activity and Mental Health</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 21, 2023</h6>
                     <p>The link between physical activity and mental health is undeniable. This entry

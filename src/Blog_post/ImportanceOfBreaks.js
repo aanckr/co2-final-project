@@ -8,7 +8,7 @@ function ImportanceOfBreaks() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>The importance of breaks and social support</h1>
+                    <h1>The Importance of Breaks and Social Support</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 17, 2023</h6>
                     <p>During hectic study schedules, students often forget the importance of self-care.

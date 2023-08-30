@@ -8,7 +8,7 @@ function OrganizationTips() {
             <Header />
             <div className='color_box'>
                 <div className='text_box'>
-                    <h1>Organization tips for an orderly study day</h1>
+                    <h1>Organization Tips for an Orderly Study Day</h1>
                     <h6>Author: A. Schobert</h6>
                     <h6>Last updated August 19, 2023</h6>
                     <p>The organization is the key to a more stress-free study day. In this post,
