@@ -14,10 +14,24 @@ import TimeEfficiency from './images/TimeEfficiency.png';
 import TimeManagement from './images/TimeManagement.png';
 import UnderstandingAndManaging from './images/UnderstandingAndManaging.png';
 import { useParams } from "react-router-dom";
-const React = require('react');
+import React, { useEffect } from 'react';
 
 function Blog() {
     let { user_name } = useParams();
+
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+      if (!token) {
+        window.location.href = 'http://localhost:3000/LogIn';
+      } else {
+        const [tokenUserName] = token.split(':');
+        
+        if (tokenUserName !== user_name) {
+          window.location.href = 'http://localhost:3000/LogIn';
+        }
+      }
+    }, [token, user_name]);
 
     return (
         <div className='color'>

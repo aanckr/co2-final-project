@@ -11,6 +11,20 @@ function Analysis(){
     let { user_name } = useParams();
     const [mentalHealth, setMentalHealth] = React.useState([]);
 
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+      if (!token) {
+        window.location.href = 'http://localhost:3000/LogIn';
+      } else {
+        const [tokenUserName] = token.split(':');
+        
+        if (tokenUserName !== user_name) {
+          window.location.href = 'http://localhost:3000/LogIn';
+        }
+      }
+    }, [token, user_name]);
+
     useEffect(() => {
         const dataFetch = async () => {
           const response = await fetch(`http://localhost:3001/mentalHealth/${user_name}`)

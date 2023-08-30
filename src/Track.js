@@ -28,6 +28,20 @@ function Track(){
     const [alcoholConsumption, setAlcoholConsumption] = useState();
     const [drugUse, setDrugUse] = useState();
 
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+      if (!token) {
+        window.location.href = 'http://localhost:3000/LogIn';
+      } else {
+        const [tokenUserName] = token.split(':');
+        
+        if (tokenUserName !== user_name) {
+          window.location.href = 'http://localhost:3000/LogIn';
+        }
+      }
+    }, [token, user_name]);
+
     var today = new Date();
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     var now = today.toLocaleString('en-US', options);

@@ -21,6 +21,19 @@ function Profile() {
     const [degree, setDegree]= React.useState('');
     const [course, setCourse]= React.useState('');
 
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+        if (!token) {
+          window.location.href = 'http://localhost:3000/LogIn';
+        } else {
+          const [tokenUserName] = token.split(':');
+          
+          if (tokenUserName !== user_name) {
+            window.location.href = 'http://localhost:3000/LogIn';
+          }
+        }
+      }, [token, user_name]);
 
     useEffect(() => {
         if (user.degree === 'Bachelor') {

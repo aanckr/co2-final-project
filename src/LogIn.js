@@ -20,10 +20,12 @@ function LogIn () {
             }
         }
 
-        if (userExists === false || passwordCorrect === false) {
+        if (!userExists || !passwordCorrect) {
             alert('Incorrect user data.')
             return;
         } else {
+            const token = `${userName}:${password}`;  
+            localStorage.setItem("token", token);
             window.location.href = `http://localhost:3000/Overview/${userName}`;
         }
 
