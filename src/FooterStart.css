@@ -1,38 +1,56 @@
 footer {
-    position: relative;
-    margin-top: 150px;
-    width: 100%;
-    background: rgb(114, 119, 241);
-    color: black;
-    display: flex;
-    min-height: 100px;
-    padding: 10px 10% 25px 10%;
+  justify-content: space-between;
   }
   
-  footer div {
-    text-align: center;
+  
+  .footer-start-1 a {
+    display: block;
+    text-decoration: none;
+    color: black;
     margin-top: 20px;
   }
   
-  .footer-col-4 a {
-    text-decoration: none;
-    color: black;
-    margin-right: 10px;
-  }
-  
-  .footer-col-3 p {
-    padding-top: 10px;
-  }
-  
-  .footer-col-5 {
-    flex: 1;
-    margin-top: 80px;
+  .footer-start-2{
     text-align: center;
   }
+
+
+  .footer-start-4 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+  }
   
-  .footer div h3 {
-    font-weight: 300;
-    letter-spacing: 1px;
+
+.email{
+    align-items: center;
+    width: 50%;
+    height: 35px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+  }
+
+  .email input{
+    border-radius: 2em;
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    border:none;
+  }
+  
+   .button-news {
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    border-radius: 2em;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
   }
   
   footer .wave {

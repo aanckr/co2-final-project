@@ -13,11 +13,19 @@
   background: linear-gradient(to bottom, rgba(237, 113, 173, 0.7), rgba(114, 119, 241, 0.5));
 }
 
+.color_box .previous_page{
+  text-align: right;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  margin-top: 10px; 
+  color: black;
+}
+
 .color_box {
   margin-bottom: 80px;
   margin-left: 80px;
   margin-right: 80px;
-  align-items: left;
   padding-top: 5px;
   padding-bottom: 10px;
   border-radius: 2em;
@@ -26,7 +34,6 @@
 }
 
 .text_box {
-  margin: auto;
   padding: 10px 10% 10px 10%;
 }
 
