@@ -1,12 +1,14 @@
 import Footer from './Footer';
+import Cookie from './Cookie';
 const React = require('react');
-const { Link } = require('react-router-dom');
+
 
 function Privacy() {
     return (
         <div className='color'>
             <div className='color_box'>
                 <div className='text_box'>
+                <a className="previous_page" href="javascript:history.back()">Back to previous page</a>
                     <h1>PRIVACY POLICY</h1>
                     <h6>Last updated August 23, 2023</h6>
                     <p>Personal data (hereinafter referred to as "data") are processed by us only as necessary and
