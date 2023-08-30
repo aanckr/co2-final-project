@@ -1,11 +1,10 @@
-import Footer_start from './Footer_start';
-
-const React = require('react');
-const { Link } = require('react-router-dom');
+import FooterStart from './FooterStart';
+import HeaderStart from './HeaderStart';
 
 function Homepage() {
     return (
         <div className='color'>
+                        < HeaderStart/>
             <div className='color_box'>
                 <div className='text_box'>
                     <sectin>
@@ -34,7 +33,7 @@ function Homepage() {
                     </section>
                 </div>
             </div>
-            < Footer_start/>
+            < FooterStart/>
         </div>
     );
 }
