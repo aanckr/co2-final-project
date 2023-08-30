@@ -2,34 +2,36 @@ footer {
   justify-content: space-between;
   }
   
-  
-  .footer-start-1 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin-top: 20px;
-  }
+  .footer-start-1,
+.footer-start-2,
+.footer-start-3,
+.footer-start-4 {
+  text-align: center;
+  flex: 1;
+  padding-bottom: 20px ;
+}
+
+
+.footer-start-1 a,
+.footer-start-4 a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+
   
   .footer-start-2{
     text-align: center;
   }
 
-
-  .footer-start-4 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin-top: 20px;
-  }
   
 
 .email{
-    align-items: center;
-    width: 50%;
-    height: 35px;
-    border-radius: 30px;
-    outline: none;
-    border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   }
 
   .email input{
@@ -49,8 +51,12 @@ footer {
     color: black;
     border-radius: 2em;
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 12px;
     cursor: pointer;
+  }
+
+  .button-news:hover {
+    background: rgba(237, 113, 173, 0.7);
   }
   
   footer .wave {
