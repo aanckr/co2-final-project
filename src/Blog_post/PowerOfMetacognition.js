@@ -6,6 +6,7 @@ function PowerOfMetacognition() {
     return (
         <div className='color'>
             <Header />
+            <div className='distance'></div>
             <div className='color_box'>
                 <div className='text_box'>
                     <h1>The Power of Metacognition</h1>

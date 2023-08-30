@@ -6,6 +6,7 @@ function InterplayOfMemory() {
     return (
         <div className='color'>
             <Header />
+            <div className='distance'></div>
             <div className='color_box'>
                 <div className='text_box'>
                     <h1>The Interplay of Memory and Learning Strategies</h1>

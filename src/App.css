@@ -13,6 +13,10 @@
   background: linear-gradient(to bottom, rgba(237, 113, 173, 0.7), rgba(114, 119, 241, 0.5));
 }
 
+.color .distance{
+  padding-top: 200px;
+}
+
 .color_box .previous_page{
   text-align: right;
   text-decoration: none;
