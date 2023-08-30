@@ -15,7 +15,7 @@ function SignUp(){
     useEffect(() => {
         
         const dataFetch = async () => {
-            const response = await fetch(`http://localhost:3001/userName`)
+            const response = await fetch(`http://localhost:3001/userLogIns`)
             const data = await response.json();
             
             setUser(data);
@@ -30,6 +30,7 @@ function SignUp(){
         const finalSex = sex ? sex : null;
 
         var userNameExists = false
+        console.log(user.lenght);
         user.forEach(u => {
             if (userName === u.user_name){
                 userNameExists = true;

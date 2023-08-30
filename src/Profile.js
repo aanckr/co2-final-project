@@ -45,11 +45,13 @@ function Profile() {
     
 
     const handleBachelorClick = () => {
+        setDegree('Bachelor');
         setBachelor(true);
         setMaster(false);
     };
 
     const handleMasterClick = () => {
+        setDegree('Master');
         setBachelor(false);
         setMaster(true);
     };
