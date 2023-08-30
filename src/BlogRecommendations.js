@@ -56,13 +56,9 @@ function BlogRecommendations (){
     var imgValue = blogImages[random];
     var linkValue = blogPostsLinks[random];
     
-    
-
     const link = () => {
-        console.log(linkValue);
         window.location.href = linkValue;
     };
-    
 
     return (
         <div id="blog-recommendations">
