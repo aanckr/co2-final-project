@@ -4,7 +4,7 @@ h1{
   margin-bottom: 40px;
 }
 
-#current-status, #personal-message, #health-data{
+#current-status, #personal-message, #blog-recommendations{
     width: 80%;
     height: 150px;
     border-radius: 70px;
@@ -21,7 +21,7 @@ h1{
     padding: 15px 60px 5px 60px;
   }
 
-  #message{
+  #message, #blog-recommendations span{
     padding-left: 5%;
     padding-right: 5%;
     font-size: 1.5em;

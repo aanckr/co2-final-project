@@ -1,6 +1,6 @@
 import CurrentStatus from './CurrentStatus';
 import Header from './Header';
-import HealthData from './HealthData';
+import BlogRecommendations from './BlogRecommendations';
 import PersonalMessage from './PersonalMessage';
 import Footer from './Footer'
 import "./Overview.css";
@@ -30,7 +30,7 @@ function Overview() {
     <h1>Your Profile Overview</h1>
     <CurrentStatus/>
     <PersonalMessage/>
-    <HealthData/>
+    <BlogRecommendations/>
     <Footer/>
   </div>
   )
