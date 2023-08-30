@@ -5,21 +5,6 @@ function BlogRecommendations (){
 
     let { user_name } = useParams();
 
-    const blogImages = [
-        "./images/PhysicalActivityAndMentalHealth.png",
-        "./images/PhysicalActivityAffectsMentalHealth.png",
-        "./images/PowerOfMetacognition.png",
-        './images/InterplayOfMemory.png',
-        './images/UnderstandingCognitiveEnhancement.png',
-        './images/OrganizationTips.png',
-        './images/ArtOfTimeManagement.png',
-        './images/ImportanceOfBreaks.png',
-        './images/RelaxationTechniques.png',
-        './images/TimeEfficiency.png',
-        './images/TimeManagement.png',
-        './images/UnderstandingAndManaging.png',
-    ]
-
     const blogPosts = [
         "Understanding and Managing Stress",
         "Time management and stress reduction",
@@ -52,7 +37,6 @@ function BlogRecommendations (){
 
     var random = Math.floor(Math.random()*blogPosts.length);
     var blogValue = blogPosts[random];
-    var imgValue = blogImages[random];
     var linkValue = blogPostsLinks[random];
     
     const link = () => {

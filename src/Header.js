@@ -1,6 +1,6 @@
 import "./Header.css";
 import profilePicture from "./images/profile-pic.png";
-import { link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Header() {
   let { user_name } = useParams();
