@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 function BlogRecommendations (){
 
     let { user_name } = useParams();
-    console.log(user_name);
 
     const blogImages = [
         "./images/PhysicalActivityAndMentalHealth.png",
