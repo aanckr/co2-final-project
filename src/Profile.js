@@ -124,12 +124,12 @@ function Profile() {
 
         <label className="labeling">
             Name
-            <input placeholder={user.name} className="field" type="text"  onChange={(e) => setName(e.target.value)}/> <br />
+            <input placeholder={user.name} className="field" type="text" maxLength={20} onChange={(e) => setName(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
             Email
-            <input placeholder={user.e_mail} className="field" type="email" onChange={(e) => setEmail(e.target.value)}/> <br />
+            <input placeholder={user.e_mail} className="field" type="email" maxLength={20} onChange={(e) => setEmail(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
@@ -139,7 +139,7 @@ function Profile() {
 
         <label className="labeling">
             Height
-            <input placeholder={user.height} className="field" type="number" onChange={(e) => setHeight(e.target.value)}/> <br />
+            <input placeholder={user.height} className="field" type="number"  onChange={(e) => setHeight(e.target.value)}/> <br />
         </label>
 
         <label className="labeling">
@@ -154,7 +154,6 @@ function Profile() {
                 <option value="Female" />
                 <option value="Male" />
                 <option value="Diverse" />
-                <option value="No comment" />
             </datalist> <br />
         </label>
 

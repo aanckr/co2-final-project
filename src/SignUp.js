@@ -81,12 +81,12 @@ function SignUp(){
 
                     <label className="sign-up-labeling">
                         * Email
-                        <input className="sign-up-field" type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                        <input className="sign-up-field" type='email' name='email' maxLength={20} value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     </label>
 
                     <label className="sign-up-labeling">
                         Date of Birth
-                        <input className="sign-up-field" type='date' name='birthdate' value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input>
+                        <input className="sign-up-field" type='date' name='birthdate' maxLength={25} value={birthdate} onChange={(e) => setBirthdate(e.target.value)}></input>
                     </label>
 
                     <label className="sign-up-labeling">
@@ -112,7 +112,7 @@ function SignUp(){
 
                     <label className="sign-up-labeling">
                         * Repeat Password
-                        <input className="sign-up-field" type='password' name='repeatPassword' minLength={4} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input>
+                        <input className="sign-up-field" type='password' name='repeatPassword' minLength={4} maxLength={20} value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}></input>
                     </label>
 
                     <button className="save-button" id='sign-up-btn' type='submit'>Sign Up</button>
