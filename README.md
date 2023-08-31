@@ -1,4 +1,5 @@
-# Run JetPackers
+# Run Mental Health Tracker 
+Use Branch Pages instead of main
 
 ## Requirements
 
