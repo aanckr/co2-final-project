@@ -1,1 +1,62 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/oaK-E1m7)
+# Run Mental Health Tracker 
+Use Branch "Pages" instead of "main"
+
+## Requirements
+
+Docker
+Visual Studio Code
+
+## First start
+
+### Create MYSQL_DATABASE
+
+console:
+    docker run --name pluto -e MYSQL_ROOT_PASSWORD=Potsdam\!sGr8 -e MYSQL_USER=web-admin -e MYSQL_PASSWORD=Potsdam\!sGr8 -e MYSQL_DATABASE=pluto -p 3306:3306 -d mysql:latest
+
+### Run Database
+Option1: Start Database in Docker
+Option2: console:
+            docker start pluto
+
+### Start API
+open console of co2-web-dev-final-project-pluto/Server :
+    node index.js
+
+### Create Schema and Tables
+Terminal:
+    curl -X POST http://localhost:3001/initialize
+
+
+### Start dynamic web application/ frontend
+open console of console of co2-web-dev-final-project-pluto :
+    install react-scripts:
+        npm install react-scripts --save
+
+    start Website:
+        npm start
+
+
+## Second Start
+
+### Run Database
+Option1: Start Database in Docker
+Option2: console:
+            docker start pluto
+
+### Start API
+open console of co2-web-dev-final-project-pluto/Server :
+    node index.js
+
+### Start dynamic web application/ frontend
+open console of console of co2-web-dev-final-project-pluto :
+    npm start
+
+
+
+### If you want to have example data:
+Terminal:
+    curl -X POST http://localhost:3001/addExampleData
+
+Login data:
+    User Name: John
+    Password: pass1234
