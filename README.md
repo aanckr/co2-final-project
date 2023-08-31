@@ -1,5 +1,5 @@
 # Run Mental Health Tracker 
-Use Branch Pages instead of main
+Use Branch "Pages" instead of "main"
 
 ## Requirements
 
@@ -11,7 +11,7 @@ Visual Studio Code
 ### Create MYSQL_DATABASE
 
 console:
-    docker run --name pluto -e MYSQL_ROOT_PASSWORD=Potsdam\!sGr8 -e MYSQL_USER=web-admin -e MYSQL_PASSWORD=Potsdam\!sGr8 -e MYSQL_DATABASE=pluto -p 3306:3306 -d mysql:latest
+    docker run --name pluto -e MYSQL_ROOT_PASSWORD=Pluto -e MYSQL_USER=web-admin -e MYSQL_PASSWORD=Pluto -e MYSQL_DATABASE=pluto -p 3306:3306 -d mysql:latest
 
 ### Run Database
 Option1: Start Database in Docker

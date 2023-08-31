@@ -12,7 +12,7 @@ app.use(express.json());
 const con = mysql.createConnection({
     host: '127.0.0.1',
     user: 'web-admin',
-    password: 'Potsdam!sGr8',
+    password: 'Pluto',
     database: 'pluto'
 });
 
