@@ -46,7 +46,7 @@ function MentalHealth ({setGeneralMood, setStressLevel, setSleepQualtiy, setSlee
 
                 <label className="track-labeling">
                     How many hours did you sleep? <br/>
-                    <input className="last-field" type="number"  onChange={(e) => setSleepDuration(e.target.value)} />
+                    <input className="last-field" type="number" min={0} max={24}  onChange={(e) => setSleepDuration(e.target.value)} />
                 </label>
 
             </form>

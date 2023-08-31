@@ -21,7 +21,7 @@ function Lifestyle ({setDietaryHabits, setActivityTime, setTobaccoUse, setAlcoho
 
                 <label className="track-labeling">
                     How many hours have you been active?
-                    <input className="field" type="number" onChange={(e) => setActivityTime(e.target.value)}/>
+                    <input className="field" type="number" min={0} max={24} onChange={(e) => setActivityTime(e.target.value)}/>
                 </label> <br/>
 
 
